@@ -111,6 +111,12 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/ignition-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-token-stream" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/ui" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth1-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/socialite" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kkszymanowski/traitor" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/santigarcor/laratrust" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/event" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/irazasyed/telegram-bot-sdk" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

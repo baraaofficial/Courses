@@ -4,6 +4,18 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
+| Dashboard Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::namespace('Admin')->middleware('auth','admin','role:administrator')->prefix('dashboard')->group(function () {
+
+    Route::get('/','HomeController@index')->name('admin.index');
+    Route::resource('users','UserController');
+});
+
+/*
+|--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |

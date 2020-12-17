@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "291f8e5a8137c6a5179d9720e9d1339e",
+    "content-hash": "772ee3d194e07d83b59df5204da06349",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -874,6 +874,131 @@
             "time": "2019-11-02T09:15:47+00:00"
         },
         {
+            "name": "irazasyed/telegram-bot-sdk",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/irazasyed/telegram-bot-sdk.git",
+                "reference": "dfa43245b7b6071e1d1fc566bd6462cbf549a1bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/irazasyed/telegram-bot-sdk/zipball/dfa43245b7b6071e1d1fc566bd6462cbf549a1bb",
+                "reference": "dfa43245b7b6071e1d1fc566bd6462cbf549a1bb",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3 || ^7.0.1",
+                "guzzlehttp/psr7": "^1.3",
+                "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+                "league/event": "^2.1",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5"
+            },
+            "suggest": {
+                "illuminate/container": "Hold dependencies to be injected in commands constructors",
+                "irazasyed/larasupport": "Allows you to use any Laravel Package in Lumen by adding support!"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Telegram\\Bot\\Laravel\\TelegramServiceProvider"
+                    ],
+                    "aliases": {
+                        "Telegram": "Telegram\\Bot\\Laravel\\Facades\\Telegram"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Telegram\\Bot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Syed Irfaq R.",
+                    "email": "syed+gh@lukonet.com",
+                    "homepage": "https://github.com/irazasyed"
+                }
+            ],
+            "description": "The Unofficial Telegram Bot API PHP SDK",
+            "homepage": "https://github.com/irazasyed/telegram-bot-sdk",
+            "keywords": [
+                "laravel",
+                "laravel telegram",
+                "telegram",
+                "telegram bot",
+                "telegram bot api",
+                "telegram php",
+                "telegram sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/irazasyed/telegram-bot-sdk/issues",
+                "source": "https://github.com/irazasyed/telegram-bot-sdk/tree/v3.3.0"
+            },
+            "time": "2020-09-10T13:37:14+00:00"
+        },
+        {
+            "name": "kkszymanowski/traitor",
+            "version": "0.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KKSzymanowski/Traitor.git",
+                "reference": "9770fc7de72ff585601dc9c42b31715d9fc40a24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KKSzymanowski/Traitor/zipball/9770fc7de72ff585601dc9c42b31715d9fc40a24",
+                "reference": "9770fc7de72ff585601dc9c42b31715d9fc40a24",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^1.0|^2.0|^3.0|^4.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Traitor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kuba Szymanowski",
+                    "email": "kuba.szymanowski@inf24.pl"
+                }
+            ],
+            "description": "Add a trait use statement to existing PHP class",
+            "keywords": [
+                "add",
+                "php",
+                "trait"
+            ],
+            "support": {
+                "email": "kuba.szymanowski@inf24.pl",
+                "issues": "https://github.com/kkszymanowski/traitor/issues",
+                "source": "https://github.com/kkszymanowski/traitor"
+            },
+            "time": "2018-04-19T12:24:36+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v7.30.0",
             "source": {
@@ -1036,6 +1161,75 @@
             "time": "2020-12-01T15:01:25+00:00"
         },
         {
+            "name": "laravel/socialite",
+            "version": "v5.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/socialite.git",
+                "reference": "19fc65ac28e0b4684a8735b14c1dc6f6ef5d62c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/19fc65ac28e0b4684a8735b14c1dc6f6ef5d62c7",
+                "reference": "19fc65ac28e0b4684a8735b14c1dc6f6ef5d62c7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "illuminate/http": "^6.0|^7.0|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "league/oauth1-client": "^1.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "illuminate/contracts": "^6.0|^7.0",
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^8.0|^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Socialite\\SocialiteServiceProvider"
+                    ],
+                    "aliases": {
+                        "Socialite": "Laravel\\Socialite\\Facades\\Socialite"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Socialite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
+            "homepage": "https://laravel.com",
+            "keywords": [
+                "laravel",
+                "oauth"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/socialite/issues",
+                "source": "https://github.com/laravel/socialite"
+            },
+            "time": "2020-12-04T15:30:50+00:00"
+        },
+        {
             "name": "laravel/tinker",
             "version": "v2.5.0",
             "source": {
@@ -1164,16 +1358,16 @@
         },
         {
             "name": "laravelcollective/html",
-            "version": "v6.2.0",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "3bb99be7502feb2129b375cd026ccb0fa4b66628"
+                "reference": "ae15b9c4bf918ec3a78f092b8555551dd693fde3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/3bb99be7502feb2129b375cd026ccb0fa4b66628",
-                "reference": "3bb99be7502feb2129b375cd026ccb0fa4b66628",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/ae15b9c4bf918ec3a78f092b8555551dd693fde3",
+                "reference": "ae15b9c4bf918ec3a78f092b8555551dd693fde3",
                 "shasum": ""
             },
             "require": {
@@ -1187,12 +1381,12 @@
             "require-dev": {
                 "illuminate/database": "^6.0|^7.0|^8.0",
                 "mockery/mockery": "~1.0",
-                "phpunit/phpunit": "~7.1"
+                "phpunit/phpunit": "~8.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.0-dev"
+                    "dev-master": "6.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -1232,7 +1426,7 @@
                 "issues": "https://github.com/LaravelCollective/html/issues",
                 "source": "https://github.com/LaravelCollective/html"
             },
-            "time": "2020-09-07T19:59:40+00:00"
+            "time": "2020-12-15T20:20:05+00:00"
         },
         {
             "name": "laravelium/feed",
@@ -1405,6 +1599,60 @@
             "time": "2020-10-31T13:49:32+00:00"
         },
         {
+            "name": "league/event",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/event.git",
+                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/event/zipball/d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
+                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
+                "phpspec/phpspec": "^2.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Event\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Event package",
+            "keywords": [
+                "emitter",
+                "event",
+                "listener"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/event/issues",
+                "source": "https://github.com/thephpleague/event/tree/master"
+            },
+            "time": "2018-11-26T11:52:41+00:00"
+        },
+        {
             "name": "league/flysystem",
             "version": "1.1.3",
             "source": {
@@ -1555,17 +1803,92 @@
             "time": "2020-10-18T11:50:25+00:00"
         },
         {
-            "name": "monolog/monolog",
-            "version": "2.1.1",
+            "name": "league/oauth1-client",
+            "version": "v1.8.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "f9eee5cec93dfb313a38b6b288741e84e53f02d5"
+                "url": "https://github.com/thephpleague/oauth1-client.git",
+                "reference": "159c3d2bf27568f9af87d6c3f4bb616a251eb12b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f9eee5cec93dfb313a38b6b288741e84e53f02d5",
-                "reference": "f9eee5cec93dfb313a38b6b288741e84e53f02d5",
+                "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/159c3d2bf27568f9af87d6c3f4bb616a251eb12b",
+                "reference": "159c3d2bf27568f9af87d6c3f4bb616a251eb12b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "ext-simplexml": "*",
+                "friendsofphp/php-cs-fixer": "^2.16.1",
+                "mockery/mockery": "^1.3",
+                "phpstan/phpstan": "^0.12.42",
+                "phpunit/phpunit": "^7.5"
+            },
+            "suggest": {
+                "ext-simplexml": "For decoding XML-based responses."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev",
+                    "dev-develop": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth1\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Corlett",
+                    "email": "bencorlett@me.com",
+                    "homepage": "http://www.webcomm.com.au",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OAuth 1.0 Client Library",
+            "keywords": [
+                "Authentication",
+                "SSO",
+                "authorization",
+                "bitbucket",
+                "identity",
+                "idp",
+                "oauth",
+                "oauth1",
+                "single sign on",
+                "trello",
+                "tumblr",
+                "twitter"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/oauth1-client/issues",
+                "source": "https://github.com/thephpleague/oauth1-client/tree/v1.8.2"
+            },
+            "time": "2020-09-28T09:39:08+00:00"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "1cb1cde8e8dd0f70cc0fe51354a59acad9302084"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1cb1cde8e8dd0f70cc0fe51354a59acad9302084",
+                "reference": "1cb1cde8e8dd0f70cc0fe51354a59acad9302084",
                 "shasum": ""
             },
             "require": {
@@ -1578,16 +1901,17 @@
             "require-dev": {
                 "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
-                "elasticsearch/elasticsearch": "^6.0",
+                "elasticsearch/elasticsearch": "^7",
                 "graylog2/gelf-php": "^1.4.2",
+                "mongodb/mongodb": "^1.8",
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
-                "php-parallel-lint/php-parallel-lint": "^1.0",
                 "phpspec/prophecy": "^1.6.1",
+                "phpstan/phpstan": "^0.12.59",
                 "phpunit/phpunit": "^8.5",
                 "predis/predis": "^1.1",
                 "rollbar/rollbar": "^1.3",
-                "ruflin/elastica": ">=0.90 <3.0",
+                "ruflin/elastica": ">=0.90 <7.0.1",
                 "swiftmailer/swiftmailer": "^5.3|^6.0"
             },
             "suggest": {
@@ -1607,7 +1931,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-main": "2.x-dev"
                 }
             },
             "autoload": {
@@ -1623,11 +1947,11 @@
                 {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
+                    "homepage": "https://seld.be"
                 }
             ],
             "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
-            "homepage": "http://github.com/Seldaek/monolog",
+            "homepage": "https://github.com/Seldaek/monolog",
             "keywords": [
                 "log",
                 "logging",
@@ -1635,7 +1959,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.1.1"
+                "source": "https://github.com/Seldaek/monolog/tree/2.2.0"
             },
             "funding": [
                 {
@@ -1647,7 +1971,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-23T08:41:23+00:00"
+            "time": "2020-12-14T13:15:25+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2473,6 +2797,81 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "santigarcor/laratrust",
+            "version": "6.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/santigarcor/laratrust.git",
+                "reference": "dcb43416ecfeacb67e056423780e288c325e9c82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/dcb43416ecfeacb67e056423780e288c325e9c82",
+                "reference": "dcb43416ecfeacb67e056423780e288c325e9c82",
+                "shasum": ""
+            },
+            "require": {
+                "kkszymanowski/traitor": "^0.2.0",
+                "laravel/framework": "~6.0|~7.0|~8.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.2",
+                "orchestra/testbench": "4.*|5.*|6.*",
+                "phpunit/phpunit": "^7.5.15|^8.4|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laratrust\\LaratrustServiceProvider"
+                    ],
+                    "aliases": {
+                        "Laratrust": "Laratrust\\LaratrustFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laratrust\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Santiago Garcia",
+                    "homepage": "http://santigarcor.me"
+                }
+            ],
+            "description": "This package provides a flexible way to add Role-based Permissions to Laravel",
+            "keywords": [
+                "Teams",
+                "acl",
+                "authorization",
+                "laratrust",
+                "laravel",
+                "multiusers",
+                "permissions",
+                "php",
+                "rbac",
+                "roles"
+            ],
+            "support": {
+                "issues": "https://github.com/santigarcor/laratrust/issues",
+                "source": "https://github.com/santigarcor/laratrust/tree/6.3.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/santigarcor",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-12-09T14:25:23+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5638,16 +6037,16 @@
         },
         {
             "name": "phar-io/version",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/version.git",
-                "reference": "726c026815142e4f8677b7cb7f2249c9ffb7ecae"
+                "reference": "e4782611070e50613683d2b9a57730e9a3ba5451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/version/zipball/726c026815142e4f8677b7cb7f2249c9ffb7ecae",
-                "reference": "726c026815142e4f8677b7cb7f2249c9ffb7ecae",
+                "url": "https://api.github.com/repos/phar-io/version/zipball/e4782611070e50613683d2b9a57730e9a3ba5451",
+                "reference": "e4782611070e50613683d2b9a57730e9a3ba5451",
                 "shasum": ""
             },
             "require": {
@@ -5683,9 +6082,9 @@
             "description": "Library for handling version information and constraints",
             "support": {
                 "issues": "https://github.com/phar-io/version/issues",
-                "source": "https://github.com/phar-io/version/tree/3.0.3"
+                "source": "https://github.com/phar-io/version/tree/3.0.4"
             },
-            "time": "2020-11-30T09:21:21+00:00"
+            "time": "2020-12-13T23:18:30+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
