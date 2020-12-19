@@ -1,10 +1,32 @@
 @extends('admin.layouts.app')
+
+@section('css')
+    <!-- Theme JS files -->
+    <script src="{{asset('admin/global_assets/js/plugins/visualization/d3/d3.min.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/plugins/visualization/d3/d3_tooltip.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/plugins/forms/styling/switchery.min.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/plugins/ui/moment/moment.min.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/plugins/pickers/daterangepicker.js')}}"></script>
+
+    <script src="{{asset('admin/global_assets/js/demo_pages/dashboard.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/streamgraph.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/sparklines.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/lines.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/areas.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/donuts.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/bars.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/progress.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/heatmaps.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/pies.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/bullets.js')}}"></script>
+    <!-- /theme JS files -->
+    @endsection
 @section('header')
     <div class="page-header border-bottom-0">
         <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline border-0">
             <div class="d-flex">
                 <div class="breadcrumb">
-                    <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> الرئيسية</a>
+                    <a href="{{url('/')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> الرئيسية</a>
                     <span class="breadcrumb-item active">لوحة التحكم</span>
                 </div>
 
@@ -44,9 +66,7 @@
 
             <div class="header-elements d-none mb-3 mb-md-0">
                 <div class="d-flex justify-content-center">
-                    <a href="#" class="btn btn-link btn-float text-default"><i class="icon-bars-alt text-indigo-400"></i> <span>Statistics</span></a>
-                    <a href="#" class="btn btn-link btn-float text-default"><i class="icon-calculator text-indigo-400"></i> <span>Invoices</span></a>
-                    <a href="#" class="btn btn-link btn-float text-default"><i class="icon-calendar5 text-indigo-400"></i> <span>Schedule</span></a>
+                   <a href="#" class="btn btn-link btn-float text-default"><i class="icon-calendar5 text-indigo-400"></i> <span>Schedule</span></a>
                 </div>
             </div>
         </div>

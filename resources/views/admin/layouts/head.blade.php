@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
-        لوحة التحكم @yield('title')
+        لوحة التحكم @yield('titleDashboard')
     </title>
 
     <!-- Global stylesheets -->
@@ -24,26 +24,8 @@
     <script src="{{asset('admin/global_assets/js/main/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('admin/global_assets/js/plugins/loaders/blockui.min.js')}}"></script>
     <!-- /core JS files -->
-
-    <!-- Theme JS files -->
-    <script src="{{asset('admin/global_assets/js/plugins/visualization/d3/d3.min.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/plugins/visualization/d3/d3_tooltip.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/plugins/forms/styling/switchery.min.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/plugins/ui/moment/moment.min.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/plugins/pickers/daterangepicker.js')}}"></script>
-
     <script src="{{asset('admin/assets/js/app.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_pages/dashboard.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/streamgraph.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/sparklines.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/lines.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/areas.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/donuts.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/bars.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/progress.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/heatmaps.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/pies.js')}}"></script>
-    <script src="{{asset('admin/global_assets/js/demo_charts/pages/dashboard/dark/bullets.js')}}"></script>
-    <!-- /theme JS files -->
+
+
     @yield('css')
 </head>

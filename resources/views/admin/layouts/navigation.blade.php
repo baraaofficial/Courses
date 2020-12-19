@@ -20,7 +20,7 @@
             </a>
         </li>
 
-        @role('administrator')
+        @role('super_admin')
             <li class="nav-item nav-item-submenu">
                 <a href="{{route('users.index')}}" class="nav-link">
                     <i class="icon-users4"></i>
@@ -28,6 +28,7 @@
                 </a>
                 <ul class="nav nav-group-sub" data-submenu-title="المستخدمين">
                     <li class="nav-item"><a href="{{route('users.index')}}" class="nav-link"><i class="icon-users4" ></i><span>جميع المستخدمين</span></a></li>
+                    @permission('users_create')
                     <li class="nav-item"><a href="{{route('users.create')}}" class="nav-link"><i class="icon-user-plus" ></i><span>إنشاء مستخدم جديد</span></a></li>
                     <li class="nav-item nav-item-submenu">
                         <a href="{{route('users.index')}}" class="nav-link">
@@ -39,6 +40,7 @@
                             <li class="nav-item"><a href="{{route('users.index')}}" class="nav-link"><i class="icon-users4" ></i><span>إضافة إذن لمستخدم</span></a></li>
                         </ul>
                     </li>
+                    @endpermission
                 </ul>
             </li>
 

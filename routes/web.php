@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -8,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-Route::namespace('Admin')->middleware('auth','admin','role:administrator')->prefix('dashboard')->group(function () {
+Route::namespace('Admin')->middleware('auth','admin','role:super_admin')->prefix('dashboard')->group(function () {
 
     Route::get('/','HomeController@index')->name('admin.index');
     Route::resource('users','UserController');

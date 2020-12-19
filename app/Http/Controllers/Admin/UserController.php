@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -18,18 +19,17 @@ class UserController extends Controller
 
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $request->merge(['password' => bcrypt($request->password)]);
+
+        $users = User::create($request->all());
+        $users->attachRole('admin');
+        $users->syncPermissions($users->permissions);
+        return redirect()->route('users.index')->with(['message' => "تم إضافة $users->name بنجاح"]);
     }
 
     /**

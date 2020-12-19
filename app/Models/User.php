@@ -22,7 +22,7 @@ class User extends Authenticatable
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'name', 'email', 'password','is_admin','location'
+        'name', 'email', 'password','is_admin','location','status','phone'
     ];
 
     /**
@@ -42,4 +42,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function scopeStatus(){
+        return $this->where('status' , 1);
+    }
 }
