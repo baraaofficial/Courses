@@ -97,4 +97,7 @@ return [
         ],
     ],
 
+    'banned_servers' => ['yahoo.com', 'gmail.com']
+
+
 ];

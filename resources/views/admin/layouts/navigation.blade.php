@@ -28,19 +28,20 @@
                 </a>
                 <ul class="nav nav-group-sub" data-submenu-title="المستخدمين">
                     <li class="nav-item"><a href="{{route('users.index')}}" class="nav-link"><i class="icon-users4" ></i><span>جميع المستخدمين</span></a></li>
-                    @permission('users_create')
-                    <li class="nav-item"><a href="{{route('users.create')}}" class="nav-link"><i class="icon-user-plus" ></i><span>إنشاء مستخدم جديد</span></a></li>
-                    <li class="nav-item nav-item-submenu">
-                        <a href="{{route('users.index')}}" class="nav-link">
-                            <i class="icon-users4"></i>
-                            <span>الأدوار والأذونات</span>
-                        </a>
-                        <ul class="nav nav-group-sub" data-submenu-title="المستخدمين">
-                            <li class="nav-item"><a href="{{route('users.index')}}" class="nav-link"><i class="critical-role" ></i><span>إضافة دور لمستخدم</span></a></li>
-                            <li class="nav-item"><a href="{{route('users.index')}}" class="nav-link"><i class="icon-users4" ></i><span>إضافة إذن لمستخدم</span></a></li>
-                        </ul>
-                    </li>
-                    @endpermission
+                    @if (auth()->user()->hasPermission('users_read'))
+                        <li class="nav-item"><a href="{{route('users.create')}}" class="nav-link"><i class="icon-user-plus" ></i><span>إنشاء مستخدم جديد</span></a></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="{{route('users.index')}}" class="nav-link">
+                                <i class="icon-users4"></i>
+                                <span>الأدوار والأذونات</span>
+                            </a>
+                            <ul class="nav nav-group-sub" data-submenu-title="المستخدمين">
+                                <li class="nav-item"><a href="{{route('users.index')}}" class="nav-link"><i class="critical-role" ></i><span>إضافة دور لمستخدم</span></a></li>
+                                <li class="nav-item"><a href="{{route('users.index')}}" class="nav-link"><i class="icon-users4" ></i><span>إضافة إذن لمستخدم</span></a></li>
+                            </ul>
+                        </li>
+                    @endif
+
                 </ul>
             </li>
 

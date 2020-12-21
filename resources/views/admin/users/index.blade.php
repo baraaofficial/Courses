@@ -85,69 +85,48 @@
                             </div>
                         </div>
                     </div>
+                        <div class="row">
+                            @foreach($users as $user)
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="card bg-slate-600" style="background-image: url(admin/global_assets/images/backgrounds/panel_bg.png); background-size: contain;">
+                                    <div class="card-body text-center">
+                                        <div class="card-img-actions d-inline-block mb-3">
+                                            <img class="img-fluid rounded-circle" src="{{asset('admin/global_assets/images/placeholders/placeholder.jpg')}}" width="170" height="170" alt="">
+                                            <div class="card-img-actions-overlay card-img rounded-circle">
+                                                <div class="ml-3 align-self-center">
+                                                    <div class="list-icons">
+                                                        <div class="dropdown">
+                                                            <a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round" data-toggle="dropdown"><i class="icon-menu7"></i></a>
+                                                            <div class="dropdown-menu">
+                                                                <a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Start chat</a>
+                                                                <a href="#" class="dropdown-item"><i class="icon-phone2"></i> Make a call</a>
+                                                                <a href="#" class="dropdown-item"><i class="icon-mail5"></i> Send mail</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a href="#" class="dropdown-item"><i class="icon-statistics"></i> Statistics</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                    <ul class="media-list media-list-linked">
-                        <li class="media font-weight-semibold border-0 py-1">قادة الموقع</li>
-                        @foreach($users as $user)
-                        <li>
-                            <div class="media">
-                                <div class="mr-3"><img src="{{asset('admin/global_assets/images/placeholders/placeholder.jpg')}}" class="rounded-circle" width="40" height="40" alt=""></div>
-                                <div class="media-body">
-                                    <div class="media-title font-weight-semibold">{{$user->name}}</div>
-                                    @if ($user->status == 1)
-                                        <span class="badge badge-success">نشط</span>
+                                                <a href="user_pages_profile.html" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
+                                                    <i class="icon-link"></i>
+                                                </a>
+                                            </div>
+                                        </div>
 
-                                    @elseif ($user->status == 0)
-                                        <span class="badge badge-danger">معلق</span>
+                                        <h6 class="font-weight-semibold mb-0">{{$user->name}}</h6>
+                                        <span class="d-block opacity-75">{{$user->email}}</span>
 
-                                    @endif
-                                </div>
-                                <div class="align-self-center ml-3">
-                                    <a href="#" class="text-default" data-toggle="collapse" data-target="#james2">
-                                        <i class="icon-menu7"></i>
-                                    </a>
+                                        <div class="list-icons list-icons-extended mt-3">
+                                            <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="Google Drive" data-container="body"><i class="icon-google-drive"></i></a>
+                                            <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="Twitter" data-container="body"><i class="icon-twitter"></i></a>
+                                            <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="Github" data-container="body"><i class="icon-github"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="collapse" id="james2">
-                                <div class="card-body bg-light border-top border-bottom">
-                                    <ul class="list list-unstyled mb-0">
-                                        <li><i class="icon-pin mr-2"></i> {{$user->location}}</li>
-                                        <li><i class="icon-user-tie mr-2"></i> Senior Designer</li>
-                                        <li><i class="icon-phone mr-2"></i> {{$user->phone}}</li>
-                                        <li><i class="icon-mail5 mr-2"></i> <a href="#">{{$user->email}}</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    @endforeach
-<!--                        <li class="media font-weight-semibold border-0 py-1">المستخدمين </li>
-                        <li>
-                            <div class="media">
-                                <div class="mr-3"><img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt=""></div>
-                                <div class="media-body">
-                                    <div class="media-title font-weight-semibold">Bastian Miller</div>
-                                    <span class="text-muted">Yahoo</span>
-                                </div>
-                                <div class="align-self-center ml-3">
-                                    <a href="#" class="text-default" data-toggle="collapse" data-target="#bastian2">
-                                        <i class="icon-menu7"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="collapse" id="bastian2">
-                                <div class="card-body bg-light border-top border-bottom">
-                                    <ul class="list list-unstyled mb-0">
-                                        <li><i class="icon-pin mr-2"></i> New York</li>
-                                        <li><i class="icon-user-tie mr-2"></i> Lead developer</li>
-                                        <li><i class="icon-phone mr-2"></i> +1(234)675 3904</li>
-                                        <li><i class="icon-mail5 mr-2"></i> <a href="#">bastian@miller.com</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>-->
-                    </ul>
+                            @endforeach
+                        </div>
                 </div><!-- /custom handle -->
             </div>
         </div><!-- /collapsible lists -->

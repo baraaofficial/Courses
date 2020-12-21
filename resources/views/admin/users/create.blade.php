@@ -1,4 +1,5 @@
 @extends('admin.layouts.app')
+@inject('model', 'App\Models\User')
 
 @section('titleDashboard')
     / إضافة مستخدم جديد

@@ -1,17 +1,20 @@
-<!-- Basic text input -->
+<!-- Start name input -->
+@php $inputname = "name"; @endphp
 <div class="form-group row">
     <label class="col-form-label col-lg-3">الإسم <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="text" name="name" class="form-control"  placeholder="إسم المستخدم">
+        <input type="text" name="name" class="form-control"  placeholder="إسم المستخدم" value="{{Request::old($inputname) ? Request::old($inputname) : $model->$inputname}}">
     </div>
 </div>
-<!-- /basic text input -->
+<!-- End name input -->
 
-<!-- Email field -->
+<!-- Start email field -->
+@php $input_email = "email"; @endphp
+
 <div class="form-group row">
     <label class="col-form-label col-lg-3">البريد الإلكتروني <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="email" name="email" class="form-control" id="email"  placeholder="أدخل البريد الإلكتروني للمستخدم">
+        <input type="email" name="{{$input_email}}" class="form-control" id="email" placeholder="أدخل البريد الإلكتروني للمستخدم" value="{{Request::old($input_email) ? Request::old($input_email) : $model->$input_email}}">
     </div>
 </div>
 <!-- /email field -->
@@ -20,7 +23,7 @@
 <div class="form-group row">
     <label class="col-form-label col-lg-3">كلمة المرور <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="password" name="password" id="password" class="form-control"  placeholder="كلمة المرور أكثر من 5 أحرف">
+        <input type="password" name="password" id="password" class="form-control" value="{{ old('password') }}" placeholder="كلمة المرور أكثر من 5 أحرف">
     </div>
 </div>
 <!-- /password field -->
@@ -30,39 +33,45 @@
 <div class="form-group row">
     <label class="col-form-label col-lg-3">إعادة إدخال كلمة المرور <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="password" name="password_confirmation" class="form-control"  placeholder="إعادة إدخال كلمة المرور وتكون مطابقه">
+        <input type="password" name="password_confirmation" class="form-control" value="{{ old('password') }}" placeholder="إعادة إدخال كلمة المرور وتكون مطابقه">
     </div>
 </div>
 <!-- /repeat password -->
 
 
 <!-- Minimum characters -->
+@php $input_location = "location"; @endphp
+
 <div class="form-group row">
     <label class="col-form-label col-lg-3">الموقع <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="text" name="location" class="form-control"  placeholder="أدخل موقع المستخدم لا يقل عن 10 أحرف">
+        <input type="text" name="{{$input_location}}" class="form-control"  placeholder="أدخل موقع المستخدم لا يقل عن 10 أحرف" value="{{Request::old($input_location) ? Request::old($input_location) : $model->$input_location}}">
     </div>
 </div>
 <!-- /minimum characters-->
 
 
 <!-- Minimum number -->
+@php $input_phone = "phone"; @endphp
+
 <div class="form-group row">
     <label class="col-form-label col-lg-3">رقم الهاتف<span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="text" name="phone" class="form-control"  placeholder="أدخل الرقم لا تقل عن 10">
+        <input type="text" name="{{$input_phone}}" class="form-control"  placeholder="أدخل الرقم لا تقل عن 10" value="{{Request::old($input_phone) ? Request::old($input_phone) : $model->$input_phone}}">
     </div>
 </div>
 <!-- /minimum number -->
 
 <!-- Select2 select -->
+@php $input_is_admin = "is_admin"; @endphp
+
 <div class="form-group row">
     <label class="col-form-label col-lg-3">الوظيفة <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <select name="is_admin" data-placeholder="إختر وظيفة المستخدم" class="form-control form-control-select2"  data-fouc>
+        <select name="{{$input_is_admin}}" data-placeholder="إختر وظيفة المستخدم" class="form-control form-control-select2"  data-fouc>
             <option></option>
-                <option value="user">مستخدم</option>
-                <option value="admin">مدير</option>
+                <option value="user" {{ isset($model) && $model->{$input_is_admin} == 'user' ? 'selected'  : '' }}>مستخدم</option>
+                <option value="admin" {{ isset($model) && $model->{$input_is_admin} == 'admin' ? 'selected'  : '' }}>مدير</option>
 
         </select>
     </div>
@@ -76,8 +85,9 @@
     <label class="col-form-label col-lg-3">الحالة <span class="text-danger">*</span></label>
     <div class="col-lg-9">
         <select name="{{$input}}" data-placeholder="إختر حالة المستخدم" class="form-control form-control-select2" required data-fouc>
-            <option value="1" {{ isset($row) && $row->{$input} == '1' ? 'selected'  : '' }}>نشط</option>
-            <option value="0" {{ isset($row) && $row->{$input} == '0' ? 'selected'  : '' }}>معلق</option>
+            <option></option>
+            <option value="1" {{ isset($model) && $model->{$input} == '1' ? 'selected'  : '' }}>نشط</option>
+            <option value="0" {{ isset($model) && $model->{$input} == '0' ? 'selected'  : '' }}>معلق</option>
         </select>
     </div>
 </div>
@@ -94,34 +104,32 @@
                     <div class="col-md-6">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" name="permissions[]" value="create_users" class="form-check-input-styled-primary"  data-fouc>
+                                <input type="checkbox" name="permissions[]" value="users_create" class="form-check-input-styled-primary"  data-fouc>
                                 الإضافة
                             </label>
                         </div>
 
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" name="permissions[]" value="create_update" class="form-check-input-styled-danger"  data-fouc>
+                                <input type="checkbox" name="permissions[]" value="users_update" class="form-check-input-styled-danger"  data-fouc>
                                 التعديل
                             </label>
                         </div>
 
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" name="permissions[]" value="create_read" class="form-check-input-styled-success"  data-fouc>
-                                المشاهدة
+                                <input type="checkbox" name="permissions[]" value="users_read" class="form-check-input-styled-success"  data-fouc>
+                                العرض
                             </label>
                         </div>
 
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" name="permissions[]" value="create_delete" class="form-check-input-styled-warning"  data-fouc>
+                                <input type="checkbox" name="permissions[]" value="users_delete" class="form-check-input-styled-warning"  data-fouc>
                                 الحذف
                             </label>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
