@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\Route;
 Route::namespace('Admin')->middleware('auth','admin','role:super_admin')->prefix('dashboard')->group(function () {
     Route::get('/','HomeController@index')->name('admin.index');
     Route::resource('users','UserController');
+    /** start Route Users **/
+        Route::get('user/search', 'UserController@search')->name('users.search');
+        Route::get('user/search/{search}', 'UserController@search')->name('users.searchindex');
+        Route::get('user/delete', 'UserController@delete')->name('users.delete');
+        Route::get('user/deletedusers/{id}', 'UserController@recovery')->name('users.recovery');
+        Route::get('user/stopped', 'UserController@stopped')->name('users.stopped');
+    /** End Route Users **/
 });
 
 /*

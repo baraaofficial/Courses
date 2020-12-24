@@ -44,6 +44,6 @@ class User extends Authenticatable
     ];
 
     public function scopeStatus(){
-        return $this->where('status' , 1);
+        return $this->where('status' , 0);
     }
 }
