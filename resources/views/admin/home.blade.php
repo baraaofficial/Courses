@@ -64,7 +64,6 @@
 
 @section('content')
     <div class="content ">
-
         <!-- Basic line -->
         <div class="card">
             <div class="card-header header-elements-inline">
