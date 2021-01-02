@@ -47,7 +47,7 @@
                 line_basic.setOption({
 
                     // Define colors
-                    color: ['#E57373', '#AED581','#ffa600'],
+                    color: [ '#AED581','#E57373','#ffa600'],
 
                     // Global text styles
                     textStyle: {
@@ -144,26 +144,6 @@
                     // Add series
                     series: [
                         {
-                            name: 'المحظورين',
-                            type: 'line',
-                            data: [{{$Charts_today_users_block}},{{$Charts_yesterday_users_block}},{{$Charts_users_block_3_days_ago}},
-                                {{$Charts_users_block_4_days_ago}},{{$Charts_users_block_5_days_ago}},{{$Charts_users_block_6_days_ago}},{{$Charts_users_block_7_days_ago}}],
-                            smooth: true,
-                            symbol: 'circle',
-                            symbolSize: 7,
-                            markLine: {
-                                data: [{
-                                    type: 'average',
-                                    name: 'Average'
-                                }]
-                            },
-                            itemStyle: {
-                                normal: {
-                                    borderWidth: 2
-                                }
-                            }
-                        },
-                        {
                             name: 'الجدد',
                             type: 'line',
                             data: [ {{$Charts_today_users}},{{$Charts_yesterday_users}},
@@ -184,6 +164,28 @@
                                 }
                             }
                         },
+
+                        {
+                            name: 'المحظورين',
+                            type: 'line',
+                            data: [{{$Charts_today_users_block}},{{$Charts_yesterday_users_block}},{{$Charts_users_block_3_days_ago}},
+                                {{$Charts_users_block_4_days_ago}},{{$Charts_users_block_5_days_ago}},{{$Charts_users_block_6_days_ago}},{{$Charts_users_block_7_days_ago}}],
+                            smooth: true,
+                            symbol: 'circle',
+                            symbolSize: 7,
+                            markLine: {
+                                data: [{
+                                    type: 'average',
+                                    name: 'Average'
+                                }]
+                            },
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: 2
+                                }
+                            }
+                        },
+
                         {
                             name: 'المحذوفين',
                             type: 'line',

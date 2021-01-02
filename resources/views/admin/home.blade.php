@@ -3,14 +3,11 @@
 @section('css')
     <!-- Theme JS files -->
     <script src="{{asset('admin/global_assets/js/plugins/visualization/echarts/echarts.min.js')}}"></script>
-
-
     @include('admin.charts.users')
 
     <!-- /theme JS files -->
     @endsection
 @section('header')
-
     <div class="page-header border-bottom-0">
         <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline border-0">
             <div class="d-flex">

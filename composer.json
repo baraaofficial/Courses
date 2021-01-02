@@ -20,7 +20,8 @@
         "laravel/ui": "2.4",
         "laravelcollective/html": "^6.2",
         "laravelium/feed": "7.*",
-        "santigarcor/laratrust": "^6.3"
+        "santigarcor/laratrust": "^6.3",
+        "stevebauman/location": "^5.2"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

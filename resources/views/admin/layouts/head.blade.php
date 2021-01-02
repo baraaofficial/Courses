@@ -5,7 +5,6 @@
     <title>
         لوحة التحكم @yield('titleDashboard')
     </title>
-
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,15 +17,11 @@
     <link href="{{asset('admin/assets/css/components.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('admin/assets/css/colors.min.css')}}" rel="stylesheet" type="text/css">
     <!-- /global stylesheets -->
-
     <!-- Core JS files -->
     <script src="{{asset('admin/global_assets/js/main/jquery.min.js')}}"></script>
     <script src="{{asset('admin/global_assets/js/main/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('admin/global_assets/js/plugins/loaders/blockui.min.js')}}"></script>
     <!-- /core JS files -->
-
     <script src="{{asset('admin/assets/js/app.js')}}"></script>
-
-
     @yield('css')
 </head>

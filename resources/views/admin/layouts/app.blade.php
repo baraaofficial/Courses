@@ -63,7 +63,7 @@
                             <div class="media-body">
                                 <div class="media-title font-weight-semibold">{{auth()->user()->name}}</div>
                                 <div class="font-size-xs opacity-50">
-                                    <i class="icon-pin font-size-sm"></i> &nbsp;{{auth()->user()->location}}
+                                    <i class="icon-pin font-size-sm"></i> &nbsp;{{$data->countryName }} , {{$data->regionName}}
                                 </div>
                             </div>
 
