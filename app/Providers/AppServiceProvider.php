@@ -24,5 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $ip = '3456543';
+        view()->share('data',  \Location::get($ip));
     }
 }

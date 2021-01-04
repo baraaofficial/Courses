@@ -3,7 +3,17 @@
 <div class="form-group row">
     <label class="col-form-label col-lg-3">الإسم <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="text" name="name" class="form-control"  placeholder="إسم المستخدم" value="{{Request::old($inputname) ? Request::old($inputname) : $model->$inputname}}">
+        <div class="form-group-feedback form-group-feedback-right">
+            <input type="text" name="{{$inputname}}" id="name" class="form-control maxlength-custom @error($inputname) border-danger-400 @enderror" maxlength="199" placeholder="إسم المستخدم" value="{{Request::old($inputname) ? Request::old($inputname) : $model->$inputname}}" required>
+            @error($inputname)
+            <div class="form-control-feedback text-danger-400">
+                <i class="icon-cancel-circle2"></i>
+            </div>
+            @enderror
+        </div>
+        @error($inputname)
+        <span class="form-text text-danger-400">{{ $message }}</span>
+        @enderror
     </div>
 </div>
 <!-- End name input -->
@@ -14,16 +24,38 @@
 <div class="form-group row">
     <label class="col-form-label col-lg-3">البريد الإلكتروني <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="email" name="{{$input_email}}" class="form-control" id="email" placeholder="أدخل البريد الإلكتروني للمستخدم" value="{{Request::old($input_email) ? Request::old($input_email) : $model->$input_email}}">
+    <div class="form-group-feedback form-group-feedback-right">
+        <input type="email" name="{{$input_email}}" class="form-control @error($input_email) border-danger-400 @enderror" maxlength="255" id="email" placeholder="أدخل البريد الإلكتروني للمستخدم" value="{{Request::old($input_email) ? Request::old($input_email) : $model->$input_email}}" required>
+        @error($input_email)
+        <div class="form-control-feedback text-danger-400">
+            <i class="icon-cancel-circle2"></i>
+        </div>
+        @enderror
+    </div>
+    @error($input_email)
+    <span class="form-text text-danger-400">{{ $message }}</span>
+    @enderror
     </div>
 </div>
 <!-- /email field -->
 
 <!-- Password field -->
+@php $input_password = "password"; @endphp
 <div class="form-group row">
     <label class="col-form-label col-lg-3">كلمة المرور <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="password" name="password" id="password" class="form-control" value="{{ old('password') }}" placeholder="كلمة المرور أكثر من 5 أحرف">
+    <div class="form-group-feedback form-group-feedback-right">
+        <input type="password" name="password" id="password"  class="form-control @error($input_password) border-danger-400 @enderror" value="{{ old('password') }}" placeholder="كلمة المرور أكثر من 5 أحرف" required>
+        <span class="badge password-indicator-badge-absolute"></span>
+        @error($input_password)
+        <div class="form-control-feedback text-danger-400">
+            <i class="icon-cancel-circle2"></i>
+        </div>
+        @enderror
+    </div>
+    @error($input_password)
+    <span class="form-text text-danger-400">{{ $message }}</span>
+    @enderror
     </div>
 </div>
 <!-- /password field -->
@@ -33,7 +65,17 @@
 <div class="form-group row">
     <label class="col-form-label col-lg-3">إعادة إدخال كلمة المرور <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="password" name="password_confirmation" class="form-control" value="{{ old('password') }}" placeholder="إعادة إدخال كلمة المرور وتكون مطابقه">
+    <div class="form-group-feedback form-group-feedback-right">
+        <input type="password" name="password_confirmation" id="repeat_password" class="form-control @error($input_password) border-danger-400 @enderror" value="{{ old('password') }}" placeholder="إعادة إدخال كلمة المرور وتكون مطابقه" required>
+        @error($input_password)
+        <div class="form-control-feedback text-danger-400">
+            <i class="icon-cancel-circle2"></i>
+        </div>
+        @enderror
+    </div>
+    @error($input_password)
+    <span class="form-text text-danger-400">{{ $message }}</span>
+    @enderror
     </div>
 </div>
 <!-- /repeat password -->
@@ -42,10 +84,20 @@
 <!-- Minimum characters -->
 @php $input_location = "location"; @endphp
 
-<div class="form-group row">
+<div class="form-group row form-group-feedback form-group-feedback-right ">
     <label class="col-form-label col-lg-3">الموقع <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="text" name="{{$input_location}}" class="form-control"  placeholder="أدخل موقع المستخدم لا يقل عن 10 أحرف" value="{{Request::old($input_location) ? Request::old($input_location) : $model->$input_location}}">
+    <div class="form-group-feedback form-group-feedback-right">
+        <input type="text" name="{{$input_location}}" class="form-control @error($input_location) border-danger-400 @enderror" maxlength="255" id="location" placeholder="أدخل موقع المستخدم لا يقل عن 10 أحرف" value="{{ Request::old($input_location) ? Request::old($input_location) : $model->$input_location  }}" required>
+        @error($input_location)
+        <div class="form-control-feedback text-danger-400">
+            <i class="icon-cancel-circle2"></i>
+        </div>
+        @enderror
+    </div>
+    @error($input_location)
+    <span class="form-text text-danger-400">{{ $message }}</span>
+    @enderror
     </div>
 </div>
 <!-- /minimum characters-->
@@ -57,7 +109,17 @@
 <div class="form-group row">
     <label class="col-form-label col-lg-3">رقم الهاتف<span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <input type="text" name="{{$input_phone}}" class="form-control"  placeholder="أدخل الرقم لا تقل عن 10" value="{{Request::old($input_phone) ? Request::old($input_phone) : $model->$input_phone}}">
+    <div class="form-group-feedback form-group-feedback-right">
+        <input type="text" name="{{$input_phone}}" class="form-control @error($input_phone) border-danger-400 @enderror" id="phone" maxlength="11" placeholder="أدخل الرقم لا تقل عن 10" value="{{Request::old($input_phone) ? Request::old($input_phone) : $model->$input_phone}}" required>
+        @error($input_phone)
+        <div class="form-control-feedback text-danger-400">
+            <i class="icon-cancel-circle2"></i>
+        </div>
+        @enderror
+    </div>
+    @error($input_phone)
+    <span class="form-text text-danger-400">{{ $message }}</span>
+    @enderror
     </div>
 </div>
 <!-- /minimum number -->
@@ -68,11 +130,10 @@
 <div class="form-group row">
     <label class="col-form-label col-lg-3">الوظيفة <span class="text-danger">*</span></label>
     <div class="col-lg-9">
-        <select name="{{$input_is_admin}}" data-placeholder="إختر وظيفة المستخدم" class="form-control form-control-select2"  data-fouc>
+        <select name="{{$input_is_admin}}" data-placeholder="إختر وظيفة المستخدم" class="form-control form-control-select2" required data-fouc>
             <option></option>
                 <option value="user" {{ isset($model) && $model->{$input_is_admin} == 'user' ? 'selected'  : '' }}>مستخدم</option>
                 <option value="admin" {{ isset($model) && $model->{$input_is_admin} == 'admin' ? 'selected'  : '' }}>مدير</option>
-
         </select>
     </div>
 </div>

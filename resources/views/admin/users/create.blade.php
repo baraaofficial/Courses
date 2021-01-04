@@ -16,8 +16,8 @@
 
     <script src="{{asset('admin/global_assets/js/demo_pages/form_validation.js')}}"></script>
     <!-- Theme JS files -->
-    <script src="{{asset('admin/global_assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
     <script src="{{asset('admin/global_assets/js/demo_pages/form_inputs.js')}}"></script>
+
     <!-- /theme JS files -->
 
 @endsection

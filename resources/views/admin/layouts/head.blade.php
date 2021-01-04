@@ -5,6 +5,10 @@
     <title>
         لوحة التحكم @yield('titleDashboard')
     </title>
+
+    <link rel="shortcut icon" href="{{asset('image/icon.ico')}}">
+    <link rel="icon" type="image/png" href="{{asset('image/icon.ico')}}" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('image/icon.ico')}}">
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">

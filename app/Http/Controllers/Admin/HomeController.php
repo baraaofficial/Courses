@@ -11,6 +11,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
 
+
         // Start chart users new
         $Charts_today_users      = User::whereDate('created_at', today())->count();
         $Charts_yesterday_users  = User::whereDate('created_at', today()->subDays(2))->count();
@@ -42,9 +43,9 @@ class HomeController extends Controller
         $Charts_users_block_7_days_ago = User::status()->whereDate('updated_at', today()->subDays(7))->count();
         // End chart users block
 
-        $ip =  '156.218.227.102'; //For static IP address get
+     //   $ip =  '156.218.227.102'; //For static IP address get
         //$ip = request()->ip(); //Dynamic IP address get
-        $data = \Location::get();
+      //  $data = \Location::get();
         return view('admin.home',
             compact('Charts_today_users','Charts_yesterday_users','Charts_users_3_days_ago',
                 'Charts_users_4_days_ago','Charts_users_4_days_ago','Charts_users_5_days_ago',
@@ -55,7 +56,7 @@ class HomeController extends Controller
                 //end var charts users block
                 //start var charts users trashed
                 'Charts_today_users_trashed','Charts_yesterday_users_trashed','Charts_users_trashed_3_days_ago',
-                'Charts_users_trashed_4_days_ago','Charts_users_trashed_5_days_ago','Charts_users_trashed_6_days_ago','Charts_users_trashed_7_days_ago','data'
+                'Charts_users_trashed_4_days_ago','Charts_users_trashed_5_days_ago','Charts_users_trashed_6_days_ago','Charts_users_trashed_7_days_ago'
                 //end var charts users trashed
         ));
     }

@@ -60,8 +60,7 @@
 @endsection
 
 @section('content')
-    <div class="content ">
-        <!-- Basic line -->
+    <div class="content "><!-- Basic line -->
         <div class="card">
             <div class="card-header header-elements-inline">
                 <h5 class="card-title">مخططات المستخدمين</h5>
@@ -79,8 +78,6 @@
                     <div class="chart has-fixed-height" id="line_basic"></div>
                 </div>
             </div>
-        </div>
-        <!-- /basic line -->
+        </div><!-- /basic line -->
     </div>
-
 @endsection

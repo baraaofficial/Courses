@@ -11,7 +11,9 @@ return [
     |
     */
 
-    'driver' => Stevebauman\Location\Drivers\IpApi::class,
+    //'driver' => Stevebauman\Locatio   n\Drivers\IpApi::class,
+   // 'driver' => Stevebauman\Location\Drivers\IpInfo::class,
+    'driver' => Stevebauman\Location\Drivers\MaxMind::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -114,7 +116,7 @@ return [
 
     'ipinfo' => [
 
-        'token' => env('IPINFO_TOKEN'),
+        'token' => '33b7b7927e8c2e',
 
     ],
 

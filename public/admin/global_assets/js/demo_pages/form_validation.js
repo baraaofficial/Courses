@@ -127,7 +127,7 @@ var FormValidation = function() {
                 $(element).removeClass(errorClass);
             },
             success: function(label) {
-                label.addClass('validation-valid-label').text('Success.'); // remove to hide Success message
+                label.addClass('validation-valid-label').text('تم الإدخال.'); // remove to hide Success message
             },
 
             // Different components require proper error label placement
@@ -155,7 +155,7 @@ var FormValidation = function() {
             },
             rules: {
                 password: {
-                    minlength: 5
+                    minlength: 8
                 },
                 repeat_password: {
                     equalTo: '#password'
@@ -210,11 +210,20 @@ var FormValidation = function() {
                 },
                 switch_group: {
                     minlength: 2
+                },
+                location: {
+                    maxlength: 225
+                },
+                phone: {
+                    minlength: 11,
+                    maxlength: 11,
+                    number: true,
+                    digits:true
                 }
             },
             messages: {
                 custom: {
-                    required: 'This is a custom error message'
+                    required: 'هذه رسالة خطأ مخصصة'
                 },
                 basic_checkbox: {
                     minlength: 'Please select at least {0} checkboxes'

@@ -41,7 +41,6 @@ class StoreUserRequest extends FormRequest
         return [
             'phone.required' => 'رقم الهاتف مطلوب',
             'phone.max' => 'رقم الهاتف لا يزيد عن 255 رقم'
-
         ];
     }
 }
