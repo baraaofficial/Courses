@@ -12,13 +12,14 @@
     <script src="{{asset('admin/global_assets/js/plugins/forms/styling/switchery.min.js')}}"></script>
     <script src="{{asset('admin/global_assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
     <script src="{{asset('admin/global_assets/js/demo_pages/form_checkboxes_radios.js')}}"></script>
-
     <script src="{{asset('admin/global_assets/js/demo_pages/form_validation.js')}}"></script>
     <!-- Theme JS files -->
-    <script src="{{asset('admin/global_assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
     <script src="{{asset('admin/global_assets/js/demo_pages/form_inputs.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_pages/form_controls_extended.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/plugins/forms/inputs/maxlength.min.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/plugins/forms/inputs/passy.js')}}"></script>
+    <script src="{{asset('admin/global_assets/js/demo_pages/form_input_groups.js')}}"></script>
     <!-- /theme JS files -->
-
 @endsection
 @section('header')
     <div class="page-header border-bottom-0">

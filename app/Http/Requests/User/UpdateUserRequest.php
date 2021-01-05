@@ -25,6 +25,7 @@ class UpdateUserRequest extends FormRequest
     {
         return [
             'name'     => 'required|string|min:3|max:199',
+            'username' => 'required|string|min:3|max:199',
             'email'    => 'required|string|email|max:255',
             'phone'    => 'string|max:255',
             'location' => 'string|max:255',

@@ -127,7 +127,7 @@ var FormValidation = function() {
                 $(element).removeClass(errorClass);
             },
             success: function(label) {
-                label.addClass('validation-valid-label').text('تم الإدخال.'); // remove to hide Success message
+                label.addClass('validation-valid-label').text('تم الإدخال .'); // remove to hide Success message
             },
 
             // Different components require proper error label placement
@@ -217,8 +217,9 @@ var FormValidation = function() {
                 phone: {
                     minlength: 11,
                     maxlength: 11,
-                    number: true,
-                    digits:true
+                    digits:true,
+                    number: true
+
                 }
             },
             messages: {

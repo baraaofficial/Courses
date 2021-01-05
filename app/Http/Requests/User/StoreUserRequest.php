@@ -25,8 +25,9 @@ class StoreUserRequest extends FormRequest
     {
         return [
             'name'     => 'required|string|min:3|max:199',
+            'username' => 'required|string|min:3|max:199|unique:users',
             'email'    => 'required|string|email:rfc,dns,spoof,filter,strict|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:8',
             'phone'    => 'required|max:255',
             'location' => 'required|string|max:255',
         ];
@@ -39,8 +40,7 @@ class StoreUserRequest extends FormRequest
     public function message()
     {
         return [
-            'phone.required' => 'رقم الهاتف مطلوب',
-            'phone.max' => 'رقم الهاتف لا يزيد عن 255 رقم'
+
         ];
     }
 }
