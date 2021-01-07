@@ -37,6 +37,17 @@
             </li>
         @endrole<!-- /main -->
         <li class="nav-item-header mt-0"><div class="text-uppercase font-size-xs line-height-xs">قائمة الإعدادت</div> <i class="icon-menu" title="Main"></i></li>
-
+        <li class="nav-item nav-item-submenu">
+            <a href="{{route('settings.index')}}" class="nav-link {{active()->route('settings.*')}}">
+                <i class="icon-cog3"></i>
+                <span>الإعدادات</span>
+            </a>
+            <ul class="nav nav-group-sub" data-submenu-title="المستخدمين">
+                <li class="nav-item"><a href="{{route('settings.index')}}" class="nav-link {{active()->route('settings.index')}}"><i class="icon-cog3" ></i><span>جميع الإعدادات</span></a></li>
+                @if (auth()->user()->hasPermission('users_read'))
+                    <li class="nav-item"><a href="{{route('settings.create')}}" class="nav-link {{active()->route('settings.create')}}"><i class="icon-plus22" ></i><span>إنشاء إعدادات جديدة</span></a></li>
+                @endif
+            </ul>
+        </li>
     </ul>
 </div>
