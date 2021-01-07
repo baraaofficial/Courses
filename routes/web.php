@@ -11,14 +11,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::namespace('Admin')->middleware('auth','admin','role:super_admin')->prefix('dashboard')->group(function () {
     Route::get('/','HomeController@index')->name('admin.index');
-    Route::resource('users','UserController');
-    /** start Route Users **/
-        Route::get('user/search', 'UserController@search')->name('users.search');
-        Route::get('user/search/{search}', 'UserController@search')->name('users.searchindex');
-        Route::get('user/delete', 'UserController@delete')->name('users.delete');
-        Route::get('user/deletedusers/{id}', 'UserController@recovery')->name('users.recovery');
-        Route::get('user/stopped', 'UserController@stopped')->name('users.stopped');
-    /** End Route Users **/
+    /** start route users **/
+    Route::resource('users','UserController'); // Route user resource
+    Route::get('user/search', 'UserController@search')->name('users.search'); // Route user search
+    Route::get('user/search/{search}', 'UserController@search')->name('users.searchindex'); // Route user search index
+    Route::get('user/delete', 'UserController@delete')->name('users.delete'); // Route user delete
+    Route::get('user/deletedusers/{id}', 'UserController@recovery')->name('users.recovery'); // Route user deleted recovery
+    Route::get('user/stopped', 'UserController@stopped')->name('users.stopped'); // Route user stopped
+    /** End route users **/
+
+    /** Start route settings **/
+    Route::resource('settings','SettingController'); // Route settings
+    /** End route settings **/
 });
 
 /*

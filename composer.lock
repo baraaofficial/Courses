@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5490e72f4f32e231222da62881561593",
+    "content-hash": "d9927ff08b8bffe9f9466ef62dd46239",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1294,16 +1294,16 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v5.1.2",
+            "version": "v5.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "19fc65ac28e0b4684a8735b14c1dc6f6ef5d62c7"
+                "reference": "2e6beafe911a09f2300353c102d882e9d63f1f72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/19fc65ac28e0b4684a8735b14c1dc6f6ef5d62c7",
-                "reference": "19fc65ac28e0b4684a8735b14c1dc6f6ef5d62c7",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/2e6beafe911a09f2300353c102d882e9d63f1f72",
+                "reference": "2e6beafe911a09f2300353c102d882e9d63f1f72",
                 "shasum": ""
             },
             "require": {
@@ -1359,7 +1359,7 @@
                 "issues": "https://github.com/laravel/socialite/issues",
                 "source": "https://github.com/laravel/socialite"
             },
-            "time": "2020-12-04T15:30:50+00:00"
+            "time": "2021-01-05T17:02:09+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -3118,6 +3118,67 @@
                 }
             ],
             "time": "2020-12-09T14:25:23+00:00"
+        },
+        {
+            "name": "stevebauman/active",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stevebauman/active.git",
+                "reference": "45c7197056e9bb4b8f6d64443edc8f7cf153849f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stevebauman/active/zipball/45c7197056e9bb4b8f6d64443edc8f7cf153849f",
+                "reference": "45c7197056e9bb4b8f6d64443edc8f7cf153849f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "*",
+                "orchestra/testbench": "*"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Stevebauman\\Active\\ActiveServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stevebauman\\Active\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Bauman",
+                    "email": "steven_bauman@outlook.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An Active link helper for outputting classes for the users current route.",
+            "keywords": [
+                "active",
+                "links",
+                "output"
+            ],
+            "support": {
+                "issues": "https://github.com/stevebauman/active/issues",
+                "source": "https://github.com/stevebauman/active"
+            },
+            "time": "2021-01-05T22:38:12+00:00"
         },
         {
             "name": "stevebauman/location",

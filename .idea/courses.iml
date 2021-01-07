@@ -121,6 +121,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/stevebauman/location" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/maxmind-db/reader" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/geoip2/geoip2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/stevebauman/active" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

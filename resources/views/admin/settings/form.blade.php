@@ -1,14 +1,14 @@
 <!-- Start name input -->
 @php $inputname = "name"; @endphp
 <div class="form-group row">
-    <label class="col-form-label col-lg-3">الإسم <span class="text-danger">*</span></label>
+    <label class="col-form-label col-lg-3">إسم الموقع <span class="text-danger">*</span></label>
     <div class="col-lg-9">
         <div class="form-group-feedback form-group-feedback-right">
             <div class="input-group">
                 <span class="input-group-prepend">
                     <span class="input-group-text"><i class="icon-user"></i></span>
                 </span>
-                <input type="text" name="{{$inputname}}" id="name" class="form-control maxlength-badge-position @error($inputname) border-danger-400 @enderror" maxlength="199" placeholder="الإسم" value="{{Request::old($inputname) ? Request::old($inputname) : $model->$inputname}}" required>
+                <input type="text" name="{{$inputname}}" id="name" class="form-control maxlength-badge-position @error($inputname) border-danger-400 @enderror" maxlength="199" placeholder="إسم الموقع" value="{{Request::old($inputname) ? Request::old($inputname) : $model->$inputname}}" required>
                 @error($inputname)
                 <div class="form-control-feedback text-danger-400">
                     <i class="icon-cancel-circle2"></i>
@@ -22,32 +22,32 @@
     </div>
 </div><!-- End name input -->
 
-<!-- Start name input -->
-@php $inputusername = "username"; @endphp
+<!-- Start keyword input -->
+@php $inputkeyword = "keyword"; @endphp
 <div class="form-group row">
-    <label class="col-form-label col-lg-3">إسم المستخدم <span class="text-danger">*</span></label>
+    <label class="col-form-label col-lg-3">كلمات رئيسية <span class="text-danger">*</span></label>
     <div class="col-lg-9">
         <div class="form-group-feedback form-group-feedback-right">
             <div class="input-group">
                 <span class="input-group-prepend">
                     <span class="input-group-text bg-pink border-pink text-white">@</span>
                 </span>
-                <input type="text" name="{{$inputusername}}" id="username" class="form-control maxlength-badge-position @error($inputusername) border-danger-400 @enderror" maxlength="199" placeholder="إسم المستخدم" value="{{Request::old($inputusername) ? Request::old($inputusername) : $model->$inputusername}}" required>
-                @error($inputusername)
+                <input type="text" name="{{$inputkeyword}}" id="keyword" class="form-control maxlength-badge-position @error($inputkeyword) border-danger-400 @enderror" maxlength="199" placeholder="كلمات رئيسية" value="{{Request::old($inputkeyword) ? Request::old($inputkeyword) : $model->$inputkeyword}}" required>
+                @error($inputkeyword)
                 <div class="form-control-feedback text-danger-400">
                     <i class="icon-cancel-circle2"></i>
                 </div>
                 @enderror
             </div>
         </div>
-        @error($inputusername)
+        @error($inputkeyword)
         <span class="form-text text-danger-400">{{ $message }}</span>
         @enderror
     </div>
-</div><!-- End name input -->
+</div><!-- End keyword input -->
 
 <!-- Start email field -->
-@php $input_email = "email"; @endphp
+@php $input_email = "mail"; @endphp
 <div class="form-group row">
     <label class="col-form-label col-lg-3">البريد الإلكتروني <span class="text-danger">*</span></label>
     <div class="col-lg-9">
@@ -69,40 +69,6 @@
         @enderror
     </div>
 </div><!-- /email field -->
-
-<!-- Password field -->
-@php $input_password = "password"; @endphp
-<div class="form-group row">
-    <label class="col-form-label col-lg-3">كلمة المرور <span class="text-danger">*</span></label>
-    <div class="col-lg-9">
-        <div class="input-group group-indicator">
-            <input type="password" name="password" id="password" class="form-control" value="{{ old('password') }}" placeholder="كلمة المرور أكثر من 5 أحرف" required>
-            <span class="input-group-append">
-                <span class="input-group-text">لا يوجد كلمة سر</span>
-            </span>
-        </div>
-    </div>
-</div><!-- /password field -->
-
-
-<!-- Repeat password -->
-<div class="form-group row">
-    <label class="col-form-label col-lg-3">إعادة إدخال كلمة المرور <span class="text-danger">*</span></label>
-    <div class="col-lg-9">
-        <div class="form-group-feedback form-group-feedback-right">
-            <input type="password" name="repeat_password" class="form-control @error($input_password) border-danger-400 @enderror" value="{{ old('password') }}" placeholder="إعادة إدخال كلمة المرور وتكون مطابقه" required>
-            @error($input_password)
-            <div class="form-control-feedback text-danger-400">
-                <i class="icon-cancel-circle2"></i>
-            </div>
-            @enderror
-        </div>
-        @error($input_password)
-        <span class="form-text text-danger-400">{{ $message }}</span>
-        @enderror
-    </div>
-</div> <!-- /repeat password -->
-
 
 <!-- Minimum characters -->
 @php $input_location = "location"; @endphp

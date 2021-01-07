@@ -2,16 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2a2d735-d7fe-477e-abaa-730c92ee0008" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/About.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Code.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/CommentCourses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/CommentLesson.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Contact_us.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Fremwork.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Language.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Lessons.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Level.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Library.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Path.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Question.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Question_option.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/ReplyCommentArticle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/ReplyCommentCourse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/ReplyCommentLesson.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Student.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Tag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_articles_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_books_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_codes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_commentsArticls_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_commentsCourses_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_commentsLessons_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_courses_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_frameworks_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_languages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_lessons_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_levels_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_questions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_replysCommentsArticles_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_replysCommentsCourses_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_replysCommentsLessons_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_students_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_tags_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153617_create_about_us_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153617_create_contact_us_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153617_create_paths_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153617_create_questions_options_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153617_create_settings_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/settings/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/settings/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/settings/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/settings/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/courses.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/courses.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/StoreUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/StoreUserRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/User/UpdateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/User/UpdateUserRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global_assets/js/demo_pages/form_validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global_assets/js/demo_pages/form_validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +197,7 @@
       <path value="$PROJECT_DIR$/vendor/stevebauman/location" />
       <path value="$PROJECT_DIR$/vendor/maxmind-db/reader" />
       <path value="$PROJECT_DIR$/vendor/geoip2/geoip2" />
+      <path value="$PROJECT_DIR$/vendor/stevebauman/active" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mCots2jp6sFirNAXm4cSejGqyL" />
@@ -164,9 +213,17 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\laragon\www\courses\resources\views\admin" />
+      <recent name="E:\laragon\www\courses\app\Models" />
+      <recent name="E:\laragon\www\courses\database\migrations" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -191,7 +248,9 @@
       <workItem from="1609613225184" duration="2023000" />
       <workItem from="1609709142445" duration="12573000" />
       <workItem from="1609770208699" duration="14420000" />
-      <workItem from="1609859037654" duration="1203000" />
+      <workItem from="1609859037654" duration="2841000" />
+      <workItem from="1609941620024" duration="715000" />
+      <workItem from="1609947499518" duration="4982000" />
     </task>
     <servers />
   </component>

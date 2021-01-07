@@ -180,7 +180,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Telegram\Bot\Laravel\TelegramServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
-
+        Stevebauman\Active\ActiveServiceProvider::class,
 
     ],
 
