@@ -29,9 +29,9 @@ var DatatableButtonsPrint = function() {
             autoWidth: false,
             dom: '<"datatable-header"fBl><"datatable-scroll-wrap"t><"datatable-footer"ip>',
             language: {
-                search: '<span>Filter:</span> _INPUT_',
-                searchPlaceholder: 'Type to filter...',
-                lengthMenu: '<span>Show:</span> _MENU_',
+                search: '<span>بحث:</span> _INPUT_',
+                searchPlaceholder: 'إكتب هنا...',
+                lengthMenu: '<span>شاهد:</span> _MENU_',
                 paginate: { 'first': 'First', 'last': 'Last', 'next': $('html').attr('dir') == 'rtl' ? '&larr;' : '&rarr;', 'previous': $('html').attr('dir') == 'rtl' ? '&rarr;' : '&larr;' }
             }
         });
@@ -93,12 +93,12 @@ var DatatableButtonsPrint = function() {
                     {
                         extend: 'print',
                         className: 'btn btn-light',
-                        text: '<i class="icon-printer mr-2"></i> Print all'
+                        text: '<i class="icon-printer mr-2"></i> طباعة الكل'
                     },
                     {
                         extend: 'print',
                         className: 'btn btn-light',
-                        text: '<i class="icon-checkmark3 mr-2"></i> Print selected',
+                        text: '<i class="icon-checkmark3 mr-2"></i> طباعة المحدد',
                         exportOptions: {
                             modifier: {
                                 selected: true

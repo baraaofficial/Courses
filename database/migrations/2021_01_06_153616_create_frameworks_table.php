@@ -10,7 +10,12 @@ class CreateFrameworksTable extends Migration {
 	{
 		Schema::create('frameworks', function(Blueprint $table) {
 			$table->increments('id');
-			$table->string('name');
+			$table->string('name_ar');
+			$table->string('name_en');
+			$table->text('description_ar');
+			$table->text('description_en');
+            $table->string('image');
+            $table->boolean('status')->default('1');
 			$table->integer('language_id');
 			$table->timestamps();
 			$table->softDeletes();

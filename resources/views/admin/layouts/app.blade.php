@@ -63,7 +63,7 @@
                             <div class="media-body">
                                 <div class="media-title font-weight-semibold">{{auth()->user()->name}}</div>
                                 <div class="font-size-xs opacity-50">
-                                    <i class="icon-pin font-size-sm"></i> &nbsp;{{$data->countryCode }}, {{$data->isoCode}}<br>{{$data->metroCode}},{{$data->latitude}},{{$data->longitude}}
+                                    <i class="icon-pin font-size-sm"></i> {{auth()->user()->location}}&nbsp;{{--{{$data->countryCode }}, {{$data->isoCode}}<br>{{$data->metroCode}},{{$data->latitude}},{{$data->longitude}}--}}
                                 </div>
                             </div>
 

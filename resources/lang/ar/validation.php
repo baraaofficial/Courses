@@ -147,6 +147,8 @@ return [
 
     'attributes' => [
         'name'                  => 'الاسم',
+        'name_ar'               => 'الاسم بالعربية',
+        'name_en'               => 'الاسم بالإنجليزية',
         'username'              => 'اسم المُستخدم',
         'email'                 => 'البريد الالكتروني',
         'first_name'            => 'الاسم الأول',
@@ -170,11 +172,14 @@ return [
         'title'                 => 'العنوان',
         'content'               => 'المُحتوى',
         'description'           => 'الوصف',
+        'description_ar'        => 'الوصف بالعربية',
+        'description_en'        => 'الوصف بالإنجلزية',
         'excerpt'               => 'المُلخص',
         'date'                  => 'التاريخ',
         'time'                  => 'الوقت',
         'available'             => 'مُتاح',
         'size'                  => 'الحجم',
         'location'              => 'الموقع',
+        'image'                 => 'الصورة',
     ],
 ];

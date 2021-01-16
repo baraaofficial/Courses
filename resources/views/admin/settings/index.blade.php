@@ -110,57 +110,33 @@
                         <div class="header-elements">
                             <div class="list-icons">
                                 <a class="list-icons-item" data-action="collapse"></a>
-                                <a class="list-icons-item" data-action="reload"></a>
+                                <a class="list-icons-item" id="reload" data-action="reload"></a>
                                 <a class="list-icons-item" data-action="remove"></a>
                             </div>
                         </div>
                     </div>
-                        <div class="row">
-                            @foreach($users as $user)
-                            <div class="col-xl-3 col-sm-6 ">
-                                <div class="card bg-slate-600" style="background-image: url(admin/global_assets/images/backgrounds/panel_bg.png); background-size: contain;">
-                                    <div class="card-body text-center">
-                                        <div class="card-img-actions d-inline-block mb-3">
-                                            <img class="img-fluid rounded-circle" src="{{asset('admin/global_assets/images/placeholders/placeholder.jpg')}}" width="170" height="170" alt="">
-                                            <div class="card-img-actions-overlay card-img rounded-circle">
-                                                <div class="ml-3 align-self-center">
-                                                    <div class="list-icons">
-                                                        <div class="dropdown">
-                                                            <a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round" data-toggle="dropdown"><i class="icon-menu7"></i></a>
-                                                            <div class="dropdown-menu">
-                                                                {!! Form::open(array(
-                                                                    'style' => 'display: inline-block;',
-                                                                    'method' => 'DELETE',
-                                                                    'onsubmit' => "return confirm('".trans("هل أنت متأكد من حذف $user->name ؟")."');",
-                                                                    'route' => ['users.destroy', $user->id]))
-                                                               !!}
-                                                                <button class="dropdown-item"><i class="icon-user-cancel" style="color: #fa0000"></i> حذف المستخدم {{$user->name}}</button>
-                                                                {!! Form::close() !!}
-                                                                <a href="{{route('users.edit',$user->id)}}" class="dropdown-item"><i class="icon-pencil5" style="color: #87caff"></i>  تعديل المستخدم {{$user->name}}</a>
-                                                           </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <a href="user_pages_profile.html" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
-                                                    <i class="icon-link"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <h6 class="font-weight-semibold mb-0">{{$user->name}}</h6>
-                                        <span class="d-block opacity-75">{{$user->email}}</span>
-
-                                        <div class="list-icons list-icons-extended mt-3">
-                                            <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="Google Drive" data-container="body"><i class="icon-google-drive"></i></a>
-                                            <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="Twitter" data-container="body"><i class="icon-twitter"></i></a>
-                                            <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="Github" data-container="body"><i class="icon-github"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
+                    <table class="table datatable-button-print-rows ">
+                        <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Job Title</th>
+                            <th>DOB</th>
+                            <th>Status</th>
+                            <th>Salary</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Marth</td>
+                            <td><a href="#">Enright</a></td>
+                            <td>Traffic Court Referee</td>
+                            <td>22 Jun 1972</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>$85,600</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div><!-- /custom handle -->
             </div>
         </div><!-- /collapsible lists -->

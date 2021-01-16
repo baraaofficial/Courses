@@ -20,9 +20,10 @@
         "laravel/ui": "2.4",
         "laravelcollective/html": "^6.2",
         "laravelium/feed": "7.*",
+        "rabol/laravel-adsense": "dev-master",
         "santigarcor/laratrust": "^6.3",
-        "stevebauman/location": "^5.2",
-        "stevebauman/active": "2.0.0.*"
+        "stevebauman/active": "2.0.0.*",
+        "stevebauman/location": "^5.2"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

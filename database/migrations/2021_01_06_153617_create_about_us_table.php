@@ -13,6 +13,7 @@ class CreateAboutUsTable extends Migration {
 			$table->string('title');
 			$table->text('description');
 			$table->string('image');
+			$table->integer('feature_id');
 			$table->softDeletes();
 			$table->timestamps();
 		});

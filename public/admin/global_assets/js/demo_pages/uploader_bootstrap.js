@@ -192,8 +192,8 @@ var FileUpload = function() {
                 modal: modalTemplate
             },
             initialPreview: [
-                '../../../../global_assets/images/placeholders/placeholder.jpg',
-                '../../../../global_assets/images/placeholders/placeholder.jpg',
+                'admin/global_assets/images/placeholders/placeholder.jpg',
+                'admin/global_assets/images/placeholders/placeholder.jpg',
             ],
             initialPreviewConfig: [
                 {caption: 'Jane.jpg', size: 930321, key: 1, url: '{$url}', showDrag: false},
@@ -222,8 +222,8 @@ var FileUpload = function() {
                 modal: modalTemplate
             },
             initialPreview: [
-                '../../../../global_assets/images/placeholders/placeholder.jpg',
-                '../../../../global_assets/images/placeholders/placeholder.jpg'
+                'admin/global_assets/images/placeholders/placeholder.jpg',
+                'admin/global_assets/images/placeholders/placeholder.jpg'
             ],
             initialPreviewConfig: [
                 {caption: 'Jane.jpg', size: 930321, key: 1, url: '{$url}'},

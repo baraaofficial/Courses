@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('phone');
             $table->boolean('status')->default('1');
             $table->string('is_admin')->default('user');
+            $table->string('theme')->default('1');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
