@@ -5,12 +5,33 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use RakibDevs\Weather\Weather;
 
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
+        $wt = new Weather();
 
+        $info = $wt->getCurrentByCity('Alexandria');
+
+        $apiKey = "52bc11a1f7a9451d5b5afbb691bd2c6d";
+        $cityId = "361058";
+        $googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_URL, $googleApiUrl);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_VERBOSE, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $response = curl_exec($ch);
+
+        curl_close($ch);
+        $data = json_decode($response);
+        $currentTime = time();
 
         // Start chart users new
         $Charts_today_users      = User::whereDate('created_at', today())->count();
@@ -56,7 +77,7 @@ class HomeController extends Controller
                 //end var charts users block
                 //start var charts users trashed
                 'Charts_today_users_trashed','Charts_yesterday_users_trashed','Charts_users_trashed_3_days_ago',
-                'Charts_users_trashed_4_days_ago','Charts_users_trashed_5_days_ago','Charts_users_trashed_6_days_ago','Charts_users_trashed_7_days_ago'
+                'Charts_users_trashed_4_days_ago','Charts_users_trashed_5_days_ago','Charts_users_trashed_6_days_ago','Charts_users_trashed_7_days_ago','data','currentTime','info'
                 //end var charts users trashed
         ));
     }

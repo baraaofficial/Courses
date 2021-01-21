@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFeaturesTable extends Migration
+class CreateTracksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateFeaturesTable extends Migration
      */
     public function up()
     {
-        Schema::create('features', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title_ar');
-            $table->string('title_en');
-            $table->text('description_ar');
-            $table->text('description_en');
-            $table->softDeletes();
+        Schema::create('tracks', function (Blueprint $table) {
+            $table->id();
+            $table->string('');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CreateFeaturesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('features');
+        Schema::dropIfExists('tracks');
     }
 }

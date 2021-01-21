@@ -21,6 +21,7 @@
         "laravelcollective/html": "^6.2",
         "laravelium/feed": "7.*",
         "rabol/laravel-adsense": "dev-master",
+        "rakibdevs/openweather-laravel-api": "^1.2",
         "santigarcor/laratrust": "^6.3",
         "stevebauman/active": "2.0.0.*",
         "stevebauman/location": "^5.2"

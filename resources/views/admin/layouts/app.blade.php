@@ -4,7 +4,7 @@
 @include('admin.layouts.head')
 
 
-<body>
+<body style="font-family: Cairo, sans-serif">
 
 <!-- Main navbar -->
 @include('admin.layouts.navbar')
@@ -75,7 +75,6 @@
                     </div>
                 </div>
                 <!-- /user menu -->
-
                 <!-- Main navigation -->
             @include('admin.layouts.navigation')
             <!-- /main navigation -->
@@ -87,15 +86,12 @@
     </div>
 
     <!-- /main sidebar -->
-
-
     <!-- Main content -->
     <div class="content-wrapper">
 
         <!-- Content area -->
         @yield('content')
-        <!-- /content area -->
-
+    <!-- /content area -->
     </div>
     <!-- /main content -->
 

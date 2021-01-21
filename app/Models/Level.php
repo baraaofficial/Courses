@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Level extends Model 
+class Level extends Model
 {
 
     protected $table = 'levels';
@@ -14,6 +14,9 @@ class Level extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = array('level');
+    protected $fillable = ['level_ar','level_en','by','status'];
 
+    public function scopeStatus(){
+        return $this->where('status' , 1);
+    }
 }

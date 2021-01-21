@@ -62,6 +62,32 @@
                 @endif
             </ul>
         </li>
+
+        <li class="nav-item nav-item-submenu">
+            <a href="{{route('levels.index')}}" class="nav-link {{active()->route('levels.*')}}">
+                <i class="icon-stats-bars4"></i>
+                <span>المستويات</span>
+            </a>
+            <ul class="nav nav-group-sub" data-submenu-title="المستويات">
+                <li class="nav-item"><a href="{{route('levels.index')}}" class="nav-link {{active()->route('levels.index')}}"><i class="icon-stats-bars4" ></i><span>جميع المستويات </span></a></li>
+                @if (auth()->user()->hasPermission('users_read'))
+                    <li class="nav-item"><a href="{{route('levels.create')}}" class="nav-link {{active()->route('levels.create')}}"><i class="icon-plus22" ></i><span>إنشاء جديد</span></a></li>
+                @endif
+            </ul>
+        </li>
+
+        <li class="nav-item nav-item-submenu">
+            <a href="{{route('levels.index')}}" class="nav-link {{active()->route('levels.*')}}">
+                <i class="icon-price-tag2"> </i>
+                <span>العلامات </span>
+            </a>
+            <ul class="nav nav-group-sub" data-submenu-title="العلامات ">
+                <li class="nav-item"><a href="{{route('tags.index')}}" class="nav-link {{active()->route('tags.index')}}"><i class="icon-price-tag2" ></i><span>جميع العلامات  </span></a></li>
+                @if (auth()->user()->hasPermission('users_read'))
+                    <li class="nav-item"><a href="{{route('tags.create')}}" class="nav-link {{active()->route('tags.create')}}"><i class="icon-plus22" ></i><span>إنشاء جديد</span></a></li>
+                @endif
+            </ul>
+        </li>
         @endrole<!-- /main -->
         <li class="nav-item-header mt-0"><div class="text-uppercase font-size-xs line-height-xs">قائمة الإعدادت</div> <i class="icon-menu" title="Main"></i></li>
         <li class="nav-item nav-item-submenu">

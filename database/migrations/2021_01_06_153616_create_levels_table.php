@@ -10,7 +10,10 @@ class CreateLevelsTable extends Migration {
 	{
 		Schema::create('levels', function(Blueprint $table) {
 			$table->increments('id');
-			$table->string('level');
+			$table->string('level_ar');
+			$table->string('level_en');
+			$table->string('by');
+			$table->boolean('status');
 			$table->timestamps();
 			$table->softDeletes();
 		});

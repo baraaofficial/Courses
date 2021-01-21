@@ -35,6 +35,12 @@ Route::namespace('Admin')->middleware('auth','admin','role:super_admin')->prefix
     Route::get('framework/deletedframeworks/{id}', 'FrameworkController@recovery')->name('framework.recovery'); // Route user deleted recovery
 
     /** End route frameworks **/
+
+    Route::resource('levels','LevelController'); // Route levels
+
+
+    Route::resource('tags','TagController'); // Route tags
+
 });
 
 /*
