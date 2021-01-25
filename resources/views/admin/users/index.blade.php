@@ -95,12 +95,7 @@
         <!-- /search field -->
 
         <!-- Collapsible lists -->
-        @if(session('message') ?? '' )
-             @include('admin.layouts.alert.success')
-        @elseif(session('delete') ?? '' )
-            @include('admin.layouts.alert.danger')
-        @endif
-
+        @include('admin.layouts.messages.message')
         <div class="row">
             <div class="col-md-12">
                 <!-- Custom handle -->

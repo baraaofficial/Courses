@@ -72,12 +72,14 @@
                 <li class="nav-item"><a href="{{route('levels.index')}}" class="nav-link {{active()->route('levels.index')}}"><i class="icon-stats-bars4" ></i><span>جميع المستويات </span></a></li>
                 @if (auth()->user()->hasPermission('users_read'))
                     <li class="nav-item"><a href="{{route('levels.create')}}" class="nav-link {{active()->route('levels.create')}}"><i class="icon-plus22" ></i><span>إنشاء جديد</span></a></li>
+                    <li class="nav-item"><a href="{{route('level.search')}}" class="nav-link {{active()->route('level.search')}}"><i class="icon-search4" ></i><span>البحث في المستويات</span></a></li>
+                    <li class="nav-item"><a href="{{route('level.delete')}}" class="nav-link {{active()->route('level.delete')}}"><i class="icon-trash-alt" ></i><span>المستويات المحذوفة</span></a></li>
                 @endif
             </ul>
         </li>
 
         <li class="nav-item nav-item-submenu">
-            <a href="{{route('levels.index')}}" class="nav-link {{active()->route('levels.*')}}">
+            <a href="{{route('tags.index')}}" class="nav-link {{active()->route('tags.*')}}">
                 <i class="icon-price-tag2"> </i>
                 <span>العلامات </span>
             </a>

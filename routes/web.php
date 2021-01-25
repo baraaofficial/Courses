@@ -16,7 +16,7 @@ Route::namespace('Admin')->middleware('auth','admin','role:super_admin')->prefix
     Route::get('user/search', 'UserController@search')->name('users.search'); // Route user search
     Route::get('user/search/{search}', 'UserController@search')->name('users.searchindex'); // Route user search index
     Route::get('user/delete', 'UserController@delete')->name('users.delete'); // Route user delete
-    Route::get('user/deletedusers/{id}', 'UserController@recovery')->name('users.recovery'); // Route user deleted recovery
+    Route::get('user/recoveryusers/{id}', 'UserController@recovery')->name('users.recovery'); // Route user deleted recovery
     Route::get('user/stopped', 'UserController@stopped')->name('users.stopped'); // Route user stopped
     /** End route users **/
     /** Start route languages **/
@@ -32,12 +32,18 @@ Route::namespace('Admin')->middleware('auth','admin','role:super_admin')->prefix
     Route::get('framework/search/{search}','FrameworkController@search')->name('framework.searchindex'); // Route frameworks search index
     Route::get('framework/stopped','FrameworkController@stopped')->name('framework.stopped'); // Route frameworks stopped
     Route::get('framework/delete','FrameworkController@delete')->name('framework.delete'); // Route frameworks delete
-    Route::get('framework/deletedframeworks/{id}', 'FrameworkController@recovery')->name('framework.recovery'); // Route user deleted recovery
+    Route::get('framework/recoveryframeworks/{id}', 'FrameworkController@recovery')->name('framework.recovery'); // Route user deleted recovery
 
     /** End route frameworks **/
 
-    Route::resource('levels','LevelController'); // Route levels
 
+    /** Start route levels **/
+    Route::resource('levels','LevelController'); // Route levels
+    Route::get('level/search','LevelController@search')->name('level.search'); // Route levels search
+    Route::get('level/search/{search}','LevelController@search')->name('level.searchindex'); // Route levels search index
+    Route::get('level/delete','LevelController@delete')->name('level.delete'); // Route levels delete
+    Route::get('level/recoverylevels/{id}', 'LevelController@recovery')->name('level.recovery'); // Route user deleted recovery
+    /** End route levels **/
 
     Route::resource('tags','TagController'); // Route tags
 

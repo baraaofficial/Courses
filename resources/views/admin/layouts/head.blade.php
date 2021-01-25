@@ -28,5 +28,7 @@
     <script src="{{asset('admin/global_assets/js/plugins/loaders/blockui.min.js')}}"></script>
     <!-- /core JS files -->
     <script src="{{asset('admin/assets/js/app.js')}}"></script>
+
     @yield('css')
+
 </head>

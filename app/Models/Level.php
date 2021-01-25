@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 class Level extends Model
 {
@@ -13,10 +14,12 @@ class Level extends Model
 
     use SoftDeletes;
 
+
     protected $dates = ['deleted_at'];
     protected $fillable = ['level_ar','level_en','by','status'];
 
     public function scopeStatus(){
         return $this->where('status' , 1);
     }
+
 }
