@@ -159,6 +159,11 @@
                                             ])!!}
                                             <button class="dropdown-item" onclick="return confirm('هل أنت متأكد من حذف المستوي {{$level->level_ar}} ؟');"><i class="icon-trash-alt" ></i> حذف المستوي {{$level->level_ar}}</button>
                                             {!! Form::close() !!}
+                                            <form action="{{route('Level.forcedelete',$level->id)}}" method="post">
+                                                @csrf
+                                                {{method_field('delete')}}
+                                                <button  onclick="return confirm('هل أنت متأكد من حذف المستوي  {{$level->level_ar}} نهائياً ؟');" class="dropdown-item"><i class="icon-trash-alt" style="color: red"></i> حذف المستوي {{$level->level_ar}} نهائياً</button>
+                                            </form>
                                             </div>
                                         </div>
                                     </div>

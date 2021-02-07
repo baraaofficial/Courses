@@ -56,7 +56,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @if (Auth::user()->is_admin == 'admin')
+                                    @if (Auth::user()->is_admin == 'admin' && Auth::user()->status == '1')
                                         <a class="dropdown-item text-right" href="{{ route('admin.index') }}">
                                             {{ __('لوحة التحكم') }}
                                         </a>

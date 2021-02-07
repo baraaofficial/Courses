@@ -2,31 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24c59466-be5c-46ea-8399-cf00ada3531b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/MainController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Poster.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/scout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_22_081251_create_poster_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/ajax/json.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/assets/js/ajax/levels.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/messages/message.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/levels/delete.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Attachment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeacherController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Status.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Student/StoreRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Teacher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/seotools.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_06_230914_create_teachers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/thumbnails/frameworks/2021-02-06/400-161261439715316..jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/thumbnails/frameworks/2021-02-06/600-161261419282940.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/thumbnails/languages/2021-02-06/400-161261188452286..jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/thumbnails/languages/2021-02-06/400-161261223525986..jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/thumbnails/students/2021-02-06/400-161262255048192..jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/thumbnails/students/2021-02-06/600-161261161268081.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/thumbnails/students/2021-02-07/400-161265387588889..jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/thumbnails/teachers/2021-02-07/400-161265395992717..jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/students/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/students/delete.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/students/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/students/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/students/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teachers/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teachers/delete.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teachers/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teachers/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teachers/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teachers/stopped.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/courses.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/courses.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FrameworkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FrameworkController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LevelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LevelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Level.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Level.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Framework.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Framework.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Language.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Language.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_21_050524_create_tracks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_21_050524_create_tracks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_frameworks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_frameworks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_languages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_languages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_153616_create_students_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/frameworks/2021-01-15/400-1610753056-80132.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/frameworks/2021-01-15/400-1610753264-95777.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/frameworks/2021-01-16/400-1610764060-35024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/frameworks/2021-01-16/400-1610764153-63158.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/frameworks/2021-01-16/400-1610764494-25093.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/frameworks/2021-01-22/400-1611331221-91653.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/languages/2021-01-14/400-161064073466041.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/languages/2021-01-14/400-161064379285201.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/languages/2021-01-15/400-1610669241-79641.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/languages/2021-01-15/400-1610675180-12912.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/languages/2021-01-15/400-1610676610-97680.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/languages/2021-01-15/400-1610752840-14096.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/languages/2021-01-16/400-1610763876-63161.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/languages/2021-01-16/400-1610764272-93763.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/frameworks/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/frameworks/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/frameworks/search.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/languages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/languages/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/levels/delete.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/levels/delete.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/levels/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/levels/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/tags/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/tags/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/students/stopped.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +94,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -169,6 +224,8 @@
       <path value="$PROJECT_DIR$/vendor/rakibdevs/openweather-laravel-api" />
       <path value="$PROJECT_DIR$/vendor/laravel/scout" />
       <path value="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php" />
+      <path value="$PROJECT_DIR$/vendor/artesaos/seotools" />
+      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
     </include_path>
   </component>
   <component name="ProjectId" id="1muRAFhkmgDKvz3M5MrIIWcQ0vu" />
@@ -195,12 +252,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\laragon\www\courses\resources\views\admin" />
+      <recent name="E:\laragon\www\courses\resources\views\admin\students" />
       <recent name="E:\laragon\www\courses\resources\views\admin\frameworks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -251,7 +309,19 @@
       <workItem from="1611490381739" duration="894000" />
       <workItem from="1611496517551" duration="3845000" />
       <workItem from="1611558263320" duration="10776000" />
-      <workItem from="1611587708594" duration="2967000" />
+      <workItem from="1611587708594" duration="5650000" />
+      <workItem from="1611819362713" duration="833000" />
+      <workItem from="1611821083472" duration="614000" />
+      <workItem from="1611857872089" duration="2468000" />
+      <workItem from="1611918090519" duration="1239000" />
+      <workItem from="1611940968524" duration="1579000" />
+      <workItem from="1611999612492" duration="2247000" />
+      <workItem from="1612206871251" duration="4909000" />
+      <workItem from="1612299155472" duration="6251000" />
+      <workItem from="1612350821786" duration="4454000" />
+      <workItem from="1612433050972" duration="581000" />
+      <workItem from="1612525487953" duration="5726000" />
+      <workItem from="1612604366044" duration="28477000" />
     </task>
     <servers />
   </component>

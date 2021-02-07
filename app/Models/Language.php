@@ -13,7 +13,7 @@ class Language extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = ['name_ar','name_en','description_ar','description_en','image','status','by'];
+    protected $fillable = ['name_ar','name_en','description_ar','description_en','status','by'];
 
     public function attachment()
     {
@@ -26,33 +26,9 @@ class Language extends Model
     public function getPhotoAttribute()
     {
         return $this->attachment ?
-            asset($this->attachment->path) : null;
+            asset($this->attachment->path) :
+            asset('admin/global_assets/images/placeholders/placeholder.jpg');
     }
-  /*  public function getHomePhotoAttribute()
-    {
-        return $this->attachments()->where('usage', 'home_photo')->first() ?
-            asset($this->attachments()->where('usage', 'home_photo')->first()->path) : '';
-    }
-
-    public function getCategoryPhotosAttribute()
-    {
-        if($this->attachments()->where('usage', 'category_photo')->count())
-        {
-            $returnArray = [];
-
-            foreach ($this->attachments()->where('usage', 'category_photo')->get() as $photo)
-            {
-                array_push($returnArray , asset($photo->path));
-            }
-        }else{
-            $returnArray = [
-                asset('photo/in_city_1.jpeg'),
-                asset('photo/in_city_2.jpeg'),
-            ];
-        }
-
-        return $returnArray;
-    }*/
 
     public function scopeStatus(){
         return $this->where('status' , 1);

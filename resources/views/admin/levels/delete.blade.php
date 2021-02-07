@@ -147,11 +147,17 @@
                                     <div class="list-icons">
                                         <div class="dropdown">
                                             <a href="javascript: void(0);" class="list-icons-item" data-toggle="dropdown">
-                                                <i class="icon-menu9"></i>
+                                                    <i class="icon-menu9"></i>
                                             </a>
 
                                             <div class="dropdown-menu">
                                                 <a href="{{route('level.recovery', $level->id)}}" onclick="return confirm('هل أنت متأكد من استرجاع المستوي  {{$level->level_ar}} ؟');" class="dropdown-item"><i class="icon-rotate-cw2"></i> استرجاع المستوي {{$level->level_ar}}</a>
+
+                                                <form action="{{route('Level.forcedelete',$level->id)}}" method="post">
+                                                    @csrf
+                                                    {{method_field('delete')}}
+                                                    <button  onclick="return confirm('هل أنت متأكد من حذف المستوي  {{$level->level_ar}} نهائياً ؟');" class="dropdown-item"><i class="icon-trash-alt"></i> حذف المستوي {{$level->level_ar}}</button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>

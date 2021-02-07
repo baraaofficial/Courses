@@ -14,33 +14,16 @@ class HomeController extends Controller
         $wt = new Weather();
 
         $info = $wt->getCurrentByCity('Alexandria');
-
-        $apiKey = "52bc11a1f7a9451d5b5afbb691bd2c6d";
-        $cityId = "361058";
-        $googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=metric&APPID=" . $apiKey;
-
-        $ch = curl_init();
-
-        curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_URL, $googleApiUrl);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-        curl_setopt($ch, CURLOPT_VERBOSE, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        $response = curl_exec($ch);
-
-        curl_close($ch);
-        $data = json_decode($response);
         $currentTime = time();
 
         // Start chart users new
         $Charts_today_users      = User::whereDate('created_at', today())->count();
-        $Charts_yesterday_users  = User::whereDate('created_at', today()->subDays(2))->count();
-        $Charts_users_3_days_ago = User::whereDate('created_at', today()->subDays(3))->count();
-        $Charts_users_4_days_ago = User::whereDate('created_at', today()->subDays(4))->count();
-        $Charts_users_5_days_ago = User::whereDate('created_at', today()->subDays(5))->count();
-        $Charts_users_6_days_ago = User::whereDate('created_at', today()->subDays(6))->count();
-        $Charts_users_7_days_ago = User::whereDate('created_at', today()->subDays(7))->count();
+        $Charts_yesterday_users  = User::whereDate('created_at', today()->subHours(2))->count();
+        $Charts_users_3_days_ago = User::whereDate('created_at', today()->subHours(3))->count();
+        $Charts_users_4_days_ago = User::whereDate('created_at', today()->subHours(4))->count();
+        $Charts_users_5_days_ago = User::whereDate('created_at', today()->subHours(5))->count();
+        $Charts_users_6_days_ago = User::whereDate('created_at', today()->subHours(6))->count();
+        $Charts_users_7_days_ago = User::whereDate('created_at', today()->subHours(7))->count();
         // End chart users new
 
         // Start chart users trashed
@@ -71,14 +54,14 @@ class HomeController extends Controller
             compact('Charts_today_users','Charts_yesterday_users','Charts_users_3_days_ago',
                 'Charts_users_4_days_ago','Charts_users_4_days_ago','Charts_users_5_days_ago',
                 'Charts_users_6_days_ago','Charts_users_7_days_ago',
-                //start var charts users block
+                //start vars charts users block
                 'Charts_today_users_block','Charts_yesterday_users_block','Charts_users_block_3_days_ago',
                 'Charts_users_block_4_days_ago','Charts_users_block_5_days_ago','Charts_users_block_6_days_ago','Charts_users_block_7_days_ago',
-                //end var charts users block
-                //start var charts users trashed
+                //end vars charts users block
+                //start vars charts users trashed
                 'Charts_today_users_trashed','Charts_yesterday_users_trashed','Charts_users_trashed_3_days_ago',
                 'Charts_users_trashed_4_days_ago','Charts_users_trashed_5_days_ago','Charts_users_trashed_6_days_ago','Charts_users_trashed_7_days_ago','data','currentTime','info'
-                //end var charts users trashed
+                //end vars charts users trashed
         ));
     }
 }

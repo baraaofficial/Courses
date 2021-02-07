@@ -8,7 +8,7 @@
 
     <div class="navbar-collapse collapse" id="navbar-footer">
 			<span class="navbar-text">
-				&copy; 2020 - {{date('Y')}}. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+				موقع قهوة المبرمجين 2020 - {{date('Y')}} &copy;
 			</span>
 
     </div>

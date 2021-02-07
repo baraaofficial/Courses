@@ -31,7 +31,6 @@
                     <li class="nav-item"><a href="{{route('users.create')}}" class="nav-link {{active()->route('users.create')}}"><i class="icon-user-plus" ></i><span>إنشاء مستخدم جديد</span></a></li>
                     <li class="nav-item"><a href="{{route('users.stopped')}}" class="nav-link {{active()->route('users.stopped')}}"><i class="icon-user-block" ></i><span>مستخدمين محظورين</span></a></li>
                     <li class="nav-item"><a href="{{route('users.delete')}}" class="nav-link {{active()->route('users.delete')}}"><i class="icon-user-lock" ></i><span>مستخدمين فى المهملات</span></a></li>
-                    <li class="nav-item"><a href="{{route('users.search')}}" class="nav-link {{active()->route('users.search')}}"><i class="icon-search4" ></i><span>البحث عن مستخدم</span></a></li>
                 @endif
             </ul>
         </li>
@@ -57,7 +56,6 @@
                 @if (auth()->user()->hasPermission('users_read'))
                     <li class="nav-item"><a href="{{route('frameworks.create')}}" class="nav-link {{active()->route('frameworks.create')}}"><i class="icon-plus22" ></i><span>إنشاء جديد</span></a></li>
                     <li class="nav-item"><a href="{{route('framework.stopped')}}" class="nav-link {{active()->route('framework.stopped')}}"><i class="icon-stop" ></i><span>بيئات العمل المتوقفة</span></a></li>
-                    <li class="nav-item"><a href="{{route('framework.search')}}" class="nav-link {{active()->route('framework.search')}}"><i class="icon-search4" ></i><span>البحث في بيئات العمل</span></a></li>
                     <li class="nav-item"><a href="{{route('framework.delete')}}" class="nav-link {{active()->route('framework.delete')}}"><i class="icon-trash-alt" ></i><span>بيئات العمل المحذوفة</span></a></li>
                 @endif
             </ul>
@@ -72,7 +70,6 @@
                 <li class="nav-item"><a href="{{route('levels.index')}}" class="nav-link {{active()->route('levels.index')}}"><i class="icon-stats-bars4" ></i><span>جميع المستويات </span></a></li>
                 @if (auth()->user()->hasPermission('users_read'))
                     <li class="nav-item"><a href="{{route('levels.create')}}" class="nav-link {{active()->route('levels.create')}}"><i class="icon-plus22" ></i><span>إنشاء جديد</span></a></li>
-                    <li class="nav-item"><a href="{{route('level.search')}}" class="nav-link {{active()->route('level.search')}}"><i class="icon-search4" ></i><span>البحث في المستويات</span></a></li>
                     <li class="nav-item"><a href="{{route('level.delete')}}" class="nav-link {{active()->route('level.delete')}}"><i class="icon-trash-alt" ></i><span>المستويات المحذوفة</span></a></li>
                 @endif
             </ul>
@@ -87,6 +84,34 @@
                 <li class="nav-item"><a href="{{route('tags.index')}}" class="nav-link {{active()->route('tags.index')}}"><i class="icon-price-tag2" ></i><span>جميع العلامات  </span></a></li>
                 @if (auth()->user()->hasPermission('users_read'))
                     <li class="nav-item"><a href="{{route('tags.create')}}" class="nav-link {{active()->route('tags.create')}}"><i class="icon-plus22" ></i><span>إنشاء جديد</span></a></li>
+                @endif
+            </ul>
+        </li>
+        <li class="nav-item nav-item-submenu">
+            <a href="{{route('users.index')}}" class="nav-link {{active()->route('users.*')}}">
+                <i class="icon-users4"></i>
+                <span>المدرسين</span>
+            </a>
+            <ul class="nav nav-group-sub" data-submenu-title="المدرسين">
+                <li class="nav-item"><a href="{{route('teachers.index')}}" class="nav-link {{active()->route('teachers.index')}}"><i class="icon-users4" ></i><span>جميع المدرسين</span></a></li>
+                @if (auth()->user()->hasPermission('users_read'))
+                    <li class="nav-item"><a href="{{route('teachers.create')}}" class="nav-link {{active()->route('teachers.create')}}"><i class="icon-user-plus" ></i><span>إنشاء مدرس جديد</span></a></li>
+                    <li class="nav-item"><a href="{{route('teacher.stopped')}}" class="nav-link {{active()->route('teacher.stopped')}}"><i class="icon-user-block" ></i><span>مدرسين محظورين</span></a></li>
+                    <li class="nav-item"><a href="{{route('teacher.delete')}}" class="nav-link {{active()->route('teacher.delete')}}"><i class="icon-user-lock" ></i><span>مدرسين فى المهملات</span></a></li>
+                @endif
+            </ul>
+        </li>
+        <li class="nav-item nav-item-submenu">
+            <a href="{{route('users.index')}}" class="nav-link {{active()->route('users.*')}}">
+                <i class="icon-users4"></i>
+                <span>الطلاب</span>
+            </a>
+            <ul class="nav nav-group-sub" data-submenu-title="الطلاب">
+                <li class="nav-item"><a href="{{route('students.index')}}" class="nav-link {{active()->route('students.index')}}"><i class="icon-users4" ></i><span>جميع الطلاب</span></a></li>
+                @if (auth()->user()->hasPermission('users_read'))
+                    <li class="nav-item"><a href="{{route('students.create')}}" class="nav-link {{active()->route('students.create')}}"><i class="icon-user-plus" ></i><span>إنشاء طالب جديد</span></a></li>
+                    <li class="nav-item"><a href="{{route('student.stopped')}}" class="nav-link {{active()->route('student.stopped')}}"><i class="icon-user-block" ></i><span>طلاب محظورين</span></a></li>
+                    <li class="nav-item"><a href="{{route('student.delete')}}" class="nav-link {{active()->route('student.delete')}}"><i class="icon-user-lock" ></i><span>طلاب فى المهملات</span></a></li>
                 @endif
             </ul>
         </li>

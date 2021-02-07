@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2.5",
         "algolia/algoliasearch-client-php": "^2.7",
+        "artesaos/seotools": "^0.20.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
@@ -22,6 +23,7 @@
         "laravel/ui": "2.4",
         "laravelcollective/html": "^6.2",
         "laravelium/feed": "7.*",
+        "livewire/livewire": "^2.3",
         "rabol/laravel-adsense": "dev-master",
         "rakibdevs/openweather-laravel-api": "^1.2",
         "santigarcor/laratrust": "^6.3",

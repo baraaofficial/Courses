@@ -14,7 +14,7 @@ class Framework extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = ['name_ar','name_en','description_ar','description_en','image','status','by', 'language_id'];
+    protected $fillable = ['name_ar','name_en','description_ar','description_en','status','by', 'language_id'];
 
     public function attachment()
     {
@@ -28,7 +28,8 @@ class Framework extends Model
     public function getPhotoAttribute()
     {
         return $this->attachment ?
-            asset($this->attachment->path) : null;
+            asset($this->attachment->path) :
+            asset('admin/global_assets/images/placeholders/placeholder.jpg');
     }
 
     public function scopeStatus(){

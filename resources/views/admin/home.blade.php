@@ -20,7 +20,7 @@
             width: 550px;
             margin: 0 auto;
             background: linear-gradient(to right, #583d72, #9f5f80);
-            float: right;
+
         }
 
         .weather-icon {
@@ -119,22 +119,6 @@
         </div><!-- /basic line -->
     </div>
 
-    <div class="report-container text-right">
-        <h2>{{$data->name}} Weather Status</h2>
-        <div class="time">
-            <div>{{date("l g:i a", $currentTime)}}</div>
-            <div>{{date("jS F, Y",$currentTime)}}</div>
-            <div>{{ucwords($data->weather[0]->description)}}</div>
-        </div>
-        <div class="weather-forecast">
-            <img
-                src="http://openweathermap.org/img/w/{{ $data->weather[0]->icon}}.png"
-                class="weather-icon" /> {{$data->main->temp_max}}°C<span
-                class="min-temperature">{{$data->main->temp_min}}°C</span>
-        </div>
-        <div class="time">
-            <div>Humidity: {{$data->main->humidity}}%</div>
-            <div>Wind: {{$data->wind->speed}}km/h</div>
-        </div>
-    </div>
+
+
 @endsection

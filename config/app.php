@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Africa/Cairo',
 
     /*
     |--------------------------------------------------------------------------
@@ -181,7 +181,7 @@ return [
         Telegram\Bot\Laravel\TelegramServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
         Stevebauman\Active\ActiveServiceProvider::class,
-
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
     ],
 
     /*
@@ -236,7 +236,11 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Telegram' => Telegram\Bot\Laravel\Facades\Telegram::class,
         'Location' => 'Stevebauman\Location\Facades\Location',
-
+        'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph'     => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,
+        'JsonLd'        => Artesaos\SEOTools\Facades\JsonLd::class,
+        'JsonLdMulti'   => Artesaos\SEOTools\Facades\JsonLdMulti::class,
     ],
 
 ];

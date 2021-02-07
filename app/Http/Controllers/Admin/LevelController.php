@@ -62,29 +62,11 @@ class LevelController extends Controller
             ->with(['delete' => " تم حذف المستوي $levels->level_ar"]);
     }
 
-    public function search(Request $request)
-    {
-        $levels = Level::where(function($levels) use($request){
-
-            if ($request->input('keyword'))
-            {
-                $levels->where(function($levels) use($request){
-                    $levels->where('level_ar','like','%'.$request->keyword.'%');
-                    $levels->orWhere('level_en','like','%'.$request->keyword.'%');
-                    $levels->orWhere('status','like','%'.$request->keyword.'%');
-                    $levels->orWhere('by','like','%'.$request->keyword.'%');
-                });
-            }
-
-        })->latest()->limit(10)->get();
-        return view('admin.levels.search',compact('levels'));
-    }
 
     public function delete() {
         $levels = Level::onlyTrashed()->paginate(100);
         return view('admin.levels.delete', compact('levels'));
     }
-
     public function recovery($id)
     {
         $levels = Level::where('id', $id)->withTrashed()->first();
@@ -92,5 +74,12 @@ class LevelController extends Controller
 
         return redirect()->route('levels.index')
             ->with('message', "  لقد نجحت في استعادة المستوي $levels->level_ar ");
+    }
+    public function forcedelete($id)
+    {
+        $levels = Level::where('id', $id)->forceDelete();
+
+        return redirect()->route('levels.index')
+            ->with(['delete' => "تم حذف المستوي نهائياً"]);
     }
 }

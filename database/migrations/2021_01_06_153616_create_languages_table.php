@@ -14,7 +14,6 @@ class CreateLanguagesTable extends Migration {
 			$table->string('name_en');
 			$table->text('description_ar');
 			$table->text('description_en');
-			$table->string('image');
 			$table->boolean('status')->default('1');
 			$table->timestamps();
 			$table->softDeletes();

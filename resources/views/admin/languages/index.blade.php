@@ -136,7 +136,7 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$language->name_ar}}</td>
                             <td> {!!  \Illuminate\Support\Str::limit($language->description_ar, $limit = 30, $end = '....' ) !!}</td>
-                            <td><img src="{{optional($language->attachment)->path}}" width="36" height="36" class="rounded-circle"  alt="{{optional($language->attachment)->path}}"></td>
+                            <td><img src="{{$language->photo}}" width="36" height="36" class="rounded-circle"  alt="{{optional($language->attachment)->path}}"></td>
                             <td title="{{$language->created_at->format('H:i')}}">{{$language->created_at->format('Y-m-d')}}</td>
                             <td>
                                 @if ($language->status == 1)
@@ -167,6 +167,11 @@
                             </td>
                         </tr>
                         @endforeach
+
+                        <div class="text-center">
+                            {!! $languages->render() !!}
+                        </div>
+
                         </tbody>
                     </table>
                 </div><!-- /custom handle -->

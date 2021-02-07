@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('titleDashboard')
-    / بحث في المستخدمين
+    / طلاب محذوفين
 @endsection
 @section('css')
 
@@ -17,8 +17,8 @@
             <div class="d-flex">
                 <div class="breadcrumb">
                     <a href="{{url('/dashboard')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> لوحة التحكم</a>
-                    <a href="{{route('users.index')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i>جميع المستخدمين</a>
-                    <span class="breadcrumb-item active">بحث فى المستخدمين</span>
+                    <a href="{{route('students.index')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i>جميع الطلاب</a>
+                    <span class="breadcrumb-item active">عرض الطلاب في سلة المهملات</span>
                 </div>
 
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -53,13 +53,13 @@
         <div class="page-header-content header-elements-md-inline">
 
             <div class="page-title d-flex">
-                <h4><i class="icon-arrow-right6 mr-2"></i> <span class="font-weight-semibold">الرئيسية</span> - المستخدمين</h4>
+                <h4><i class="icon-arrow-right6 mr-2"></i> <span class="font-weight-semibold">الرئيسية</span> - الطلاب المحذوفين</h4>
                 <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
             </div>
 
             <div class="header-elements d-none mb-3 mb-md-0">
                 <div class="d-flex justify-content-center">
-                    <a href="{{route('users.create')}}" class="btn btn-link btn-float text-default">
+                    <a href="{{route('students.create')}}" class="btn btn-link btn-float text-default">
                         <i class="icon-user-plus text-indigo-400"></i>
                         <span>إضافة مستخدم جديد</span>
                     </a>
@@ -76,12 +76,12 @@
         <!-- Search field -->
         <div class="card">
             <div class="card-body">
-                <h5 class="mb-3">إبحث في المستخدمين</h5>
+                <h5 class="mb-3">إبحث في الطلاب</h5>
 
-                <form action="{{route('users.search')}}" method="get">
+                <form action="" method="get">
                     <div class="input-group mb-3">
                         <div class="form-group-feedback form-group-feedback-left">
-                            <input type="text" class="form-control form-control-lg" name="keyword" placeholder="إترك بحثك هنا وليكن اسم المستخدم او البريد الإلكتروني">
+                            <input type="text" class="form-control form-control-lg" name="keyword" placeholder="إترك بحثك هنا وليكن اسم الطلاب او البريد الإلكتروني">
                             <div class="form-control-feedback form-control-feedback-lg">
                                 <i class="icon-search4 text-muted"></i>
                             </div>
@@ -107,7 +107,7 @@
                 <!-- Custom handle -->
                 <div class="card ">
                     <div class="card-header header-elements-inline ">
-                        <h5 class="card-title">ما تم بحثه فى المستخدمين</h5>
+                        <h5 class="card-title">ما تم حذفه من الطلاب</h5>
                         <div class="header-elements">
                             <div class="list-icons">
                                 <a class="list-icons-item" data-action="collapse"></a>
@@ -116,8 +116,9 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
-                        @foreach($users as $user)
+                        @foreach($students as $student)
                             <div class="col-xl-3 col-sm-6 ">
                                 <div class="card bg-slate-600" style="background-image: url(admin/global_assets/images/backgrounds/panel_bg.png); background-size: contain;">
                                     <div class="card-body text-center">
@@ -129,29 +130,28 @@
                                                         <div class="dropdown">
                                                             <a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round" data-toggle="dropdown"><i class="icon-menu7"></i></a>
                                                             <div class="dropdown-menu">
+
                                                                 {!! Form::open(array(
-                                                                    'style' => 'display: inline-block;',
-                                                                    'method' => 'DELETE',
-                                                                    'onsubmit' => "return confirm('".trans("هل أنت متأكد من حذف $user->name ؟")."');",
-                                                                    'route' => ['users.destroy', $user->id]))
-                                                               !!}
-                                                                <button class="dropdown-item"><i class="icon-user-cancel" style="color: #fa0000"></i> حذف المستخدم {{$user->name}}</button>
+                                                                       'style' => 'display: inline-block;',
+                                                                       'method' => 'DELETE',
+                                                                       'onsubmit' => "return confirm('".trans("هل أنت متأكد من حذف $student->name نهائياَ؟")."');",
+                                                                       'route' => ['student.forcedelete', $student->id]))
+                                                                  !!}
+                                                                <button class="dropdown-item"><i class="icon-user-cancel" style="color: #fa0000"></i> حذف {{$student->name}} نهائيا </button>
+
                                                                 {!! Form::close() !!}
-                                                                <a href="{{route('users.edit',$user->id)}}" class="dropdown-item"><i class="icon-pencil5" style="color: #87caff"></i>  تعديل المستخدم {{$user->name}}</a>
+
+                                                                <a href="{{route('student.recovery', $student->id)}}" class="dropdown-item"><i class=icon-rotate-cw2" style="color: #87caff"></i>  استرجاع الطالب {{$student->name}}</a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <a href="user_pages_profile.html" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
-                                                    <i class="icon-link"></i>
-                                                </a>
                                             </div>
+
                                         </div>
-
-                                        <h6 class="font-weight-semibold mb-0">{{$user->name}}</h6>
-                                        <span class="d-block opacity-75">{{$user->email}}</span>
-
+                                        <h6 class="font-weight-semibold mb-0">{{$student->name}}</h6>
+                                        <span class="d-block opacity-75">{{$student->email}}</span>
                                         <div class="list-icons list-icons-extended mt-3">
                                             <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="Google Drive" data-container="body"><i class="icon-google-drive"></i></a>
                                             <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="Twitter" data-container="body"><i class="icon-twitter"></i></a>

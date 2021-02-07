@@ -79,7 +79,7 @@
             <div class="card-body">
                 <h5 class="mb-3">إبحث في بيئات العمل</h5>
 
-                <form action="{{route('framework.search')}}" method="get">
+                <form action="" method="get">
                     <div class="input-group mb-3">
                         <div class="form-group-feedback form-group-feedback-left">
                             <input type="text" class="form-control form-control-lg" name="keyword" value="" placeholder="إترك بحثك هنا وليكن اسم البيئة او وصف بيئة العمل">
@@ -137,7 +137,7 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$framework->name_ar}}</td>
                             <td> {!!  \Illuminate\Support\Str::limit($framework->description_ar, $limit = 30, $end = '....' ) !!}</td>
-                            <td><img src="{{optional($framework->attachment)->path}}" width="36" height="36" class="rounded-circle"  alt="{{optional($framework->attachment)->path}}"></td>
+                            <td><img src="{{$framework->photo}}" width="36" height="36" class="rounded-circle"  alt="{{optional($framework->attachment)->path}}"></td>
                             <td>{{optional($framework->language)->name_ar}}</td>
                             <td title="{{$framework->created_at->format('H:i')}}">{{$framework->created_at->format('Y-m-d')}}</td>
                             <td>
