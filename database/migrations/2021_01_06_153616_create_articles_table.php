@@ -10,9 +10,15 @@ class CreateArticlesTable extends Migration {
     {
         Schema::create('articles', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->text('content');
-            $table->string('image');
+            $table->string('title_ar');
+            $table->string('title_en');
+            $table->text('content_ar');
+            $table->text('content_en');
+            $table->string('by');
+            $table->integer('language_id');
+            $table->integer('framework_id');
+            $table->integer('level_id');
+            $table->string('status');
             $table->timestamps();
             $table->softDeletes();
         });

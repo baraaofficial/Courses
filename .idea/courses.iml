@@ -128,6 +128,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/algolia/algoliasearch-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/artesaos/seotools" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/livewire/livewire" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-newsletter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/drewm/mailchimp-api" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/alkoumi/laravel-hijri-date" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

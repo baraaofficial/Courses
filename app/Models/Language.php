@@ -19,15 +19,21 @@ class Language extends Model
     {
         return $this->morphOne(Attachment::class,'attachmentable');
     }
-    public function frameworks(){
 
-        return $this->hasMany(Framework::class,'language_id');
-    }
     public function getPhotoAttribute()
     {
         return $this->attachment ?
             asset($this->attachment->path) :
             asset('admin/global_assets/images/placeholders/placeholder.jpg');
+    }
+    public function frameworks(){
+
+        return $this->hasMany(Framework::class,'language_id');
+    }
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class,'language_id');
     }
 
     public function scopeStatus(){

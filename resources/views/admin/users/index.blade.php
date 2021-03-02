@@ -77,7 +77,7 @@
             <div class="card-body">
                 <h5 class="mb-3">إبحث في المستخدمين</h5>
 
-                <form action="{{route('users.search')}}" method="get">
+                <form action="" method="get">
                     <div class="input-group mb-3">
                         <div class="form-group-feedback form-group-feedback-left">
                             <input type="text" class="form-control form-control-lg" name="keyword" value="" placeholder="إترك بحثك هنا وليكن اسم المستخدم او البريد الإلكتروني">

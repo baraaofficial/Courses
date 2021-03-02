@@ -18,8 +18,16 @@ class Level extends Model
     protected $dates = ['deleted_at'];
     protected $fillable = ['level_ar','level_en','by','status'];
 
+
+    public function levels()
+    {
+        return $this->hasMany(Article::class,'level_id');
+    }
+
     public function scopeStatus(){
         return $this->where('status' , 1);
     }
+
+
 
 }

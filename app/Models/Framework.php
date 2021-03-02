@@ -31,6 +31,10 @@ class Framework extends Model
             asset($this->attachment->path) :
             asset('admin/global_assets/images/placeholders/placeholder.jpg');
     }
+    public function frameworks()
+    {
+        return $this->hasMany(Article::class,'framework_id');
+    }
 
     public function scopeStatus(){
         return $this->where('status' , 1);

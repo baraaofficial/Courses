@@ -115,6 +115,21 @@
                 @endif
             </ul>
         </li>
+
+        <li class="nav-item nav-item-submenu">
+            <a href="{{route('articles.index')}}" class="nav-link {{active()->route('articles.*')}}">
+                <i class="icon-file-text3"></i>
+                <span>المقالات</span>
+            </a>
+            <ul class="nav nav-group-sub" data-submenu-title="المقالات">
+                <li class="nav-item"><a href="{{route('articles.index')}}" class="nav-link {{active()->route('articles.index')}}"><i class="icon-file-text3" ></i><span>جميع المقالات</span></a></li>
+                @if (auth()->user()->hasPermission('users_read'))
+                    <li class="nav-item"><a href="{{route('articles.create')}}" class="nav-link {{active()->route('articles.create')}}"><i class="icon-file-plus2" ></i><span>إنشاء مقالة جديد</span></a></li>
+                    <li class="nav-item"><a href="{{route('article.stopped')}}" class="nav-link {{active()->route('article.stopped')}}"><i class="icon-file-minus2" ></i><span>مقالات متوقفة</span></a></li>
+                    <li class="nav-item"><a href="{{route('article.delete')}}" class="nav-link {{active()->route('article.delete')}}"><i class="icon-trash-alt" ></i><span>مقالات فى المهملات</span></a></li>
+                @endif
+            </ul>
+        </li>
         @endrole<!-- /main -->
         <li class="nav-item-header mt-0"><div class="text-uppercase font-size-xs line-height-xs">قائمة الإعدادت</div> <i class="icon-menu" title="Main"></i></li>
         <li class="nav-item nav-item-submenu">

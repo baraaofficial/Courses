@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2.5",
         "algolia/algoliasearch-client-php": "^2.7",
+        "alkoumi/laravel-hijri-date": "^1.0",
         "artesaos/seotools": "^0.20.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
@@ -27,6 +28,7 @@
         "rabol/laravel-adsense": "dev-master",
         "rakibdevs/openweather-laravel-api": "^1.2",
         "santigarcor/laratrust": "^6.3",
+        "spatie/laravel-newsletter": "^4.8",
         "stevebauman/active": "2.0.0.*",
         "stevebauman/location": "^5.2"
     },

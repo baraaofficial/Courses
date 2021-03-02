@@ -57,6 +57,18 @@ Route::namespace('Admin')->middleware('auth','admin','role:super_admin','status'
     Route::get('teacher/recoveryteacher/{id}','TeacherController@recovery')->name('teacher.recovery'); // Route teachers recovery
     Route::DELETE('teacher/{id}/delete', 'TeacherController@forcedelete')->name('teacher.forcedelete'); // Route teachers force delete
     /** End route teachers **/
+
+
+    /** Start route articles **/
+    
+    Route::resource('articles','ArticleController'); // Route articles
+    Route::get('article/delete','ArticleController@delete')->name('article.delete'); // Route articles delete
+    Route::get('article/stopped','ArticleController@stopped')->name('article.stopped'); // Route articles stopped
+    Route::get('article/recoveryteacher/{id}','ArticleController@recovery')->name('article.recovery'); // Route articles recovery
+    Route::DELETE('article/{id}/delete', 'ArticleController@forcedelete')->name('article.forcedelete'); // Route articles force delete
+    /** End route articles **/
+
+
 });
 
 /*
